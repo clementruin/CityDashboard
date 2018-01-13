@@ -10,7 +10,7 @@ for line in reader:
 		"evol" : float(line["evol. annuelle moy. de la population 2009-2014"]),
 		"pop" : float(line["Population 2014"]),
 		"25" : float(line["Part des pers. agees de - de 25 ans 2014"]),
-		"64" : float(line["Part des pers. agees de 25 à 64 ans 2014"]),
+		"64" : float(line["Part des pers. agees de 25 a 64 ans 2014"]),
 		"65+" : float(line["Part des pers. agees de 65 ans ou + 2014"]),
 	}
 	city_dico[code] = dico
