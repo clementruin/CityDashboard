@@ -26,3 +26,23 @@ def logement92(code):
     print('Part de résidences principales : ', round(data['main_res']/data['housing'],2), '%')
     print('Part des locataires HLM : ', data['portion_hlm_tenant'], '%')
     print('Part des logements sociaux : ', round(data['social_housing']/data['housing'],2), '%')
+    
+def printpop(code):
+    
+    reader_pop = open('static_dic/population92.json', 'r')
+    file_pop = json.load(reader_pop)
+    data = file_pop[code]
+
+    ages = ['-25', '25-64', '65+']
+    data = [data['25'], data['64'], data['65+']]
+    
+    explode=np.zeros(len(data))
+
+    for i in range(len(data)):
+        if i == data.index(max(data)):
+            explode[i]=0.15
+
+    plt.pie(data, explode=explode, labels=ages, autopct='%1.1f%%', startangle=90, shadow=True)
+    plt.axis('equal')
+    plt.show()
+    
