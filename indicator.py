@@ -6,6 +6,8 @@ Created on Sun Jan 14 17:09:32 2018
 """
 
 import json
+import numpy as np
+import matplotlib.pyplot as plt
 
 def population92(code):
     reader_pop = open('static_dic/population92.json', 'r')
@@ -16,6 +18,7 @@ def population92(code):
     print('Part de la population de moins de 65 ans : ', data['25']+data['64'], '%')
     print('Part de la population de plus de 65 ans : ', data['65+'], '%')
     print('Evolution de la population entre 2009 et 2014 : ', data['evol'], '%')
+    printpop(code)
 
 def logement92(code):
     reader_log = open('static_dic/Logement92.json', 'r')
