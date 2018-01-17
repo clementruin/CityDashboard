@@ -4,4 +4,4 @@
 
 2nd : using indicator.py, calculation of several relevant indicators regarding housing, population,...
 
-3rd : using benchmark.py, returning the indicators of the direct competitors for a given city
+3rd : using benchmark.py, returning the indicators of the direct competitors for a given city, giving a relevant comparison frame to the user
