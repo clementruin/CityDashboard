@@ -140,7 +140,7 @@ def newdata92(code):
         data['occupation_rate'],
         ]
 
-    return [indics, values]
+    return [indics, [round(v,2) for v in values]]
 
 
 def printpop(code):
@@ -167,4 +167,5 @@ def main(code):
     T1 = population92(code)
     T2 = logement92(code)
     T3 = budgets(code)
-    return [T1[0]+T2[0]+T3[0],T1[1]+T2[1]+T3[1]]
+    T4 = newdata92(code)
+    return [T1[0]+T2[0]+T3[0]+T4[0],T1[1]+T2[1]+T3[1]+T4[1]]
