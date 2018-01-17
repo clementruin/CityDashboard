@@ -85,6 +85,63 @@ def budgets(code):
         ]
     return [indics, [round(v,2) for v in values]]
     
+def newdata92(code):
+    
+    reader_ND = open('static_dic/newdata92.json', 'r')
+    file_ND = json.load(reader_ND)
+    data = file_ND[code]
+
+    indics = [ 
+        'Nb Pharmacies et parfumerie',
+        'Dynamique Entrepreneuriale',
+        'Indice Demographique',
+        'Indice Menages',
+        'Nb Menages',
+        'Nb Residences Principales',
+        'Nb proprietaire',
+        'Nb Logement',
+        'Nb Log Vacants',
+        'Nb Femme',
+        'Nb Homme',
+        'Nb Mineurs',
+        'Nb Majeurs',
+        'Nb Entreprises Secteur Commerce',
+        'Nb Creation Enteprises',
+        'Nb Atifs',
+        #indic calculés
+        'Taux de logements innocupés',
+        'Pourcentage de femmes',
+        'Taux de propriétaires',
+        'Accès à la propriété',
+        'Nombre de personnes par logement',
+        ]
+    values = [
+        data['Pharmacy_perfume'],
+        data['Entrepreneurship'],
+        data['Demo_index'],
+        data['household index'],
+        data['household_amnt'],
+        data['main residences'],
+        data['second_residences'],
+        data['housing'],
+        data['empty_housing'],
+        data['women'],
+        data['men'],
+        data['juniors'],
+        data['seniors'],
+        data['trade_companies'],
+        data['company_creation'],
+        data['actives'],
+        #indic calculés
+        data['housing_rate'],
+        data['parity'],
+        data['property_rate'],
+        data['property_access'],
+        data['occupation_rate'],
+        ]
+
+    return [indics, values]
+
 
 def printpop(code):
     
