@@ -1,4 +1,5 @@
 import json
+import indicator
 
 # Parameters
 POP_RANGE = 0.1   #+/- 10%
@@ -21,10 +22,9 @@ def similar_pop(code):
 		except :  #in case no data is available
 			comp_pop = 0
 		if comp_pop > (1-POP_RANGE)*ref_pop and comp_pop < (1+POP_RANGE)*ref_pop:
-			L.append((key, comp_pop))
+			L.append(key)
 	reader.close()
 	return(L)
-	pass 
 
 def similar_budget(code):
 	"""Finds similar cities in terms of budget"""
@@ -38,7 +38,7 @@ def similar_budget(code):
 		except :  #in case no budget for year 2015 is available
 			comp_budget = 0
 		if comp_budget > (1-BUDGET_RANGE)*ref_budget and comp_budget < (1+BUDGET_RANGE)*ref_budget:
-			L.append((key, comp_budget))
+			L.append(key)
 	reader.close()
 	return(L)
 
@@ -51,12 +51,17 @@ def benchmark(code, comparator):
 	maid on either population, budget or location similarity
 	"""
 	if comparator=="pop":
-		pass
+		cities = similar_pop(code)
 	elif comparator=="budget":
-		print(similar_budget(code))
-		pass
+		cities = similar_budget(code)
 	elif comparator=="location":
-		pass
+		cities = similar_loc(code)
+
+	tab = indicator.main(code)
+	for city in cities:
+		col_city = indicator.main(city)
+		tab.append(col_city[1])
+	return(tab)
 
 
 def valid_answer(string):
@@ -78,7 +83,7 @@ def main(code):
 	while not answer_is:
 		inp = input("which benchmark basis (pop/budget/location) ? ")
 		answer_is = valid_answer(inp)
-	benchmark(code, inp)
+	return benchmark(code, inp)
 
 
 

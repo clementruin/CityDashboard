@@ -32,7 +32,7 @@ def population92(code):
         data['65+'],
         data['evol']
         ]
-    return (indics, values)
+    return [indics, values]
 
 def logement92(code):
     reader_log = open('static_dic/Logement92.json', 'r')
@@ -55,7 +55,7 @@ def logement92(code):
         data['portion_hlm_tenant'],
         round(data['social_housing']/data['housing'],2)
         ]
-    return (indics, values)
+    return [indics, values]
     
 def printpop(code):
     
@@ -80,4 +80,4 @@ def printpop(code):
 def main(code):
     T1 = population92(code)
     T2 = logement92(code)
-    return (T1[0]+T2[0],T1[1]+T2[1])
+    return [T1[0]+T2[0],T1[1]+T2[1]]
