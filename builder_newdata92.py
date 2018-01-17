@@ -3,7 +3,7 @@ import csv
 import codecs
 
 
-readfile = open('static_raw/newdata92_edit.csv','r', encoding ="utf-8")
+readfile = open('static_raw/newdata92.csv','r', encoding ="utf-8")
 reader = csv.DictReader(readfile, delimiter=';')
 city_dico = {}
 for line in reader:
@@ -26,7 +26,12 @@ for line in reader:
     "trade_companies" : float(line['Nb Entreprises Secteur Commerce']),
     "company_creation" : float(line['Nb Creation Enteprises']),
     "actives" : float(line['Nb Atifs']),
-
+    "housing_rate": float(line['Nb Log Vacants'])/float(line['Nb Log Vacants']+line['Nb Logement']),
+    "parity": float(line['Nb Femme'])/float(line['Nb Femme']+line['Nb Homme']),
+    "property_rate": float(line['Nb proprietaire'])/(float(line['Nb Logement'])-float(line['Nb Log Vacants'])),
+    "property_access" : float(line['Nb Log Vacants'])/float(line['Indice Menages']),
+    "occupation_rate" : float(line['Nb Logement'])-float(line['Nb Log Vacants'])/float(line['Nb Menages']),
+        
 	}
 	city_dico[code] = dico
 
