@@ -59,4 +59,23 @@ def benchmark(code, comparator):
 		pass
 
 
-benchmark("92002","budget")
+def valid_answer(string):
+	if string in ["pop","location","budget"]:
+		return True
+	else :
+		print("illegal answer")
+		return False
+		raise Illegal
+
+class Illegal(Exception):
+	pass
+
+def main(code):
+	answer_is = False
+	while not answer_is:
+		inp = input("which benchmark basis (pop/budget/location) ? ")
+		answer_is = valid_answer(inp)
+	benchmark(code, inp)
+
+
+
