@@ -56,7 +56,36 @@ def logement92(code):
         round(data['social_housing']/data['housing'],2)
         ]
     return [indics, values]
+
+def budgets(code):
+    reader_budg = open('static_dic/budgets.json', 'r')
+    file_budg = json.load(reader_budg)
+    data = file_budg[code]
+    indics = [
+        'Variation des Dépenses (3 années) en %',
+        'Part des Charges de Personnel dans les dépenses',
+        'Part des Charges de Personnel dans les dépenses (variations sur 3ans)',
+        'Part des Charges Financières dans les dépenses',
+        'Part des Charges Financières dans les dépenses (variations sur 3ans)',
+        'Part des Investissment dans les dépenses',
+        'Part des Investissment dans les dépenses (variations sur 3ans)',
+        'Variation des Recettes (3 années)',
+        "Part du financement par la Dette dans les recettes de l'exercice"
+        ]
+    values = [
+        ((data["depenses"]["2015"]-data["depenses"]["2013"])/data["depenses"]["2013"])*100,
+        100*data["d1.2"]["2015"]/data["depenses"]["2015"],
+        100*data["d1.2"]["2015"]/data["depenses"]["2015"]-100*data["d1.2"]["2013"]/data["depenses"]["2013"],
+        100*data["d1.3"]["2015"]/data["depenses"]["2015"],
+        100*data["d1.3"]["2015"]/data["depenses"]["2015"]-100*data["d1.3"]["2013"]/data["depenses"]["2013"],
+        100*data["d2"]["2015"]/data["depenses"]["2015"],
+        100*data["d2"]["2015"]/data["depenses"]["2015"]-100*data["d2"]["2013"]/data["depenses"]["2013"],
+        ((data["recettes"]["2015"]-data["recettes"]["2013"])/data["recettes"]["2013"])*100,
+        100*data["r2.1"]["2015"]/data["recettes"]["2015"]
+        ]
+    return [indics, [round(v,2) for v in values]]
     
+
 def printpop(code):
     
     reader_pop = open('static_dic/population92.json', 'r')
@@ -80,4 +109,5 @@ def printpop(code):
 def main(code):
     T1 = population92(code)
     T2 = logement92(code)
-    return [T1[0]+T2[0],T1[1]+T2[1]]
+    T3 = budgets(code)
+    return [T1[0]+T2[0]+T3[0],T1[1]+T2[1]+T3[1]]
