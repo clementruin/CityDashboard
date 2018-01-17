@@ -12,8 +12,8 @@ for line in reader:
     
     "Pharmacy_perfume" : float(line['Nb Pharmacies et parfumerie']),
     "Entrepreneurship" : float(line['Dynamique Entrepreneuriale']),
-    "Demo_index" : line['Indice Demographique'],
-    "household index" : line['Indice Menages'],
+    "Demo_index" : float(line['Indice Demographique']),
+    "household index" : float(line['Indice Menages']),
     "household_amnt" : float(line['Nb Menages']),
     "main residences" : float(line['Nb Residences Principales']),
     "second_residences" : float(line['Nb proprietaire']),
@@ -26,11 +26,11 @@ for line in reader:
     "trade_companies" : float(line['Nb Entreprises Secteur Commerce']),
     "company_creation" : float(line['Nb Creation Enteprises']),
     "actives" : float(line['Nb Atifs']),
-    "housing_rate": float(line['Nb Log Vacants'])/float(line['Nb Log Vacants']+line['Nb Logement']),
-    "parity": float(line['Nb Femme'])/float(line['Nb Femme']+line['Nb Homme']),
-    "property_rate": float(line['Nb proprietaire'])/(float(line['Nb Logement'])-float(line['Nb Log Vacants'])),
-    "property_access" : float(line['Nb Log Vacants'])/float(line['Indice Menages']),
-    "occupation_rate" : float(line['Nb Logement'])-float(line['Nb Log Vacants'])/float(line['Nb Menages']),
+    "housing_rate": float(line['Nb Log Vacants'])/(float(line['Nb Log Vacants'])+float(line['Nb Logement']))*100,
+    "parity": float(line['Nb Femme'])/(float(line['Nb Femme'])+float(line['Nb Homme']))*100,
+    "property_rate": float(line['Nb proprietaire'])/(float(line['Nb Logement'])-float(line['Nb Log Vacants']))*100,
+    "property_access" : float(line['Nb Log Vacants'])/float(line['Indice Menages'])*100,
+    "occupation_rate" : (float(line['Nb Femme'])+float(line['Nb Homme']))/(float(line['Nb Logement'])-float(line['Nb Log Vacants'])),
         
 	}
 	city_dico[code] = dico
