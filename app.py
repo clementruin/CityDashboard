@@ -1,8 +1,9 @@
 import argparse
 import sys
+import json
 import numpy as np
-#import indicator
-#import benchmark
+import indicator
+import benchmark
 
 
 parser = argparse.ArgumentParser()
@@ -24,28 +25,33 @@ def main():
     process(function, argument)
 
 
-def type(arg):
-    """Determines the type of argument :
-    Did the user type a department number, city, or postal code?
+def get_code(arg):
+    """Determines the insee code of the user's input arguement 
     """
     try:
-        if int(arg) >= 1 and int(arg) <= 98:
-            return "dpt"
-        elif arg == "None":
-            return "None"
-        elif int(arg) >= 1000 and int(arg) < 99000:
-            return "postal_code"
+        if int(arg) >= 1000 and int(arg) < 99000:
+            return arg
+        #solution temporaire, on pourra utiliser un autre dico pour matcher les noms et code
     except BaseException:
-        return "other"
+        reader = open('static_dic/activite2014.json', 'r')
+        dico = json.load(reader)
+        for key in dico:
+            if dico[key]["nom"]==arg:
+                return key
+
+
+class InputError(Exception):
+    pass
 
 
 def process(function, argument):
+    code = get_code(argument)
+    if code == None:
+        raise InputError
     if function == 'indicator':
-        #indicator.main()
-        pass
+        print(indicator.main(code))
     elif function == 'benchmark':
-        #benchmark.main()
-        pass
+        print(benchmark.main(code))
 
 if __name__ == '__main__':
     main()
