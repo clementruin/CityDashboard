@@ -60,6 +60,7 @@ def benchmark(code, comparator):
 
 
 def valid_answer(string):
+	"""Test user input's validity"""
 	if string in ["pop","location","budget"]:
 		return True
 	else :
@@ -67,8 +68,10 @@ def valid_answer(string):
 		return False
 		raise Illegal
 
+
 class Illegal(Exception):
 	pass
+
 
 def main(code):
 	answer_is = False
