@@ -37,7 +37,7 @@ def similar_budget(code):
 			comp_budget = dico[key]["budget"]["2015"]
 		except :  #in case no budget for year 2015 is available
 			comp_budget = 0
-		if comp_budget > (1-BUDGET_RANGE)*ref_budget and comp_budget < (1+BUDGET_RANGE)*ref_budget:
+		if comp_budget > (1-BUDGET_RANGE)*ref_budget and comp_budget < (1+BUDGET_RANGE)*ref_budget and key[:2]=="92": #on se limite au 92 pour le moment 
 			L.append(key)
 	reader.close()
 	return(L)
@@ -57,7 +57,7 @@ def benchmark(code, comparator):
 	elif comparator=="location":
 		cities = similar_loc(code)
 
-	tab = indicator.main(code)
+	tab = [indicator.main(code)[0]]
 	for city in cities:
 		col_city = indicator.main(city)
 		tab.append(col_city[1])
