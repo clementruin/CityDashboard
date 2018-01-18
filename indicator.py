@@ -142,9 +142,9 @@ def newdata92(code):
 
     return [indics, [round(v,2) for v in values]]
 
-def newdataEntreprise92(code):
+def Entreprise92(code):
     
-    reader_ND = open('static_dic/newdataEntreprise92.json', 'r')
+    reader_ND = open('static_dic/newdata92.json', 'r')
     file_ND = json.load(reader_ND)
     data = file_ND[code]
 
@@ -180,7 +180,7 @@ def newdataEntreprise92(code):
 
 def Graph_entreprises(code):
     
-    reader_ND = open('static_dic/newdataEntreprise92.json', 'r')
+    reader_ND = open('static_dic/newdata92.json', 'r')
     file_ND = json.load(reader_ND)
     data = file_ND[code]
 
@@ -227,5 +227,5 @@ def main(code):
     T2 = logement92(code)
     T3 = budgets(code)
     T4 = newdata92(code)
-    #T5 = newdataEntreprise92(code)
+    #T5 = Entreprise92(code)
     return [T1[0]+T2[0]+T3[0]+T4[0],T1[1]+T2[1]+T3[1]+T4[1]]
