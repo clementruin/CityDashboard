@@ -4,6 +4,7 @@ import json
 import numpy as np
 import indicator
 import benchmark
+#from terminaltables import AsciiTable
 
 
 parser = argparse.ArgumentParser()
@@ -52,6 +53,10 @@ def process(function, argument):
         print(indicator.main(code))
     elif function == 'benchmark':
         print(benchmark.main(code))
+        # pour un rendu propre dans la console 
+        #table_data = benchmark.main(code)
+        #table = AsciiTable([table_data[i][:4] for i in range(len(table_data))])
+        #print(table.table)
 
 if __name__ == '__main__':
     main()
