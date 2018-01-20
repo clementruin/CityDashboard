@@ -144,6 +144,65 @@ def newdata92(code):
 
     return [indics, [round(v,2) for v in values]]
 
+def Entreprise92(code):
+    
+    reader_ND = open('static_dic/newdata92.json', 'r')
+    file_ND = json.load(reader_ND)
+    data = file_ND[code]
+
+    indics = [ 
+        'Dynamique Entrepreneuriale',
+        'Nb entreprises',
+        'Nb entreprises Industrie',
+        'Nb entreprises Commerce',
+        'Nb entreprises Services',
+        'Nb entreprises Construction',
+        'Nb creation entreprises',
+        'Nb creation entreprises Industrie',
+        'Nb creation entreprises Commerce',
+        'Nb creation entreprises Services',
+        'Nb creation Construction'
+        ]
+    values = [
+        data['Entrepreneurship'],
+        data['nb_companies'],
+        data['industry_companies'],
+        data['trade_companies'],
+        data['services_companies'],
+        data['construction_companies'],
+        data['company_creation'],
+        data['company_creation_Industry'],
+        data['company_creation_trade'],
+        data['company_creation_Services'],
+        data['company_creation_Construction']
+        ]
+
+    return [indics, [round(v,2) for v in values]]
+
+
+def Graph_entreprises(code):
+    
+    reader_ND = open('static_dic/newdata92.json', 'r')
+    file_ND = json.load(reader_ND)
+    data = file_ND[code]
+
+    name = [ 
+        'Industrie',
+        'Commerce',
+        'Services',
+        'Construction'
+        ]
+    values = [
+        data['Industry_rate'],
+        data['trade_rate'],
+        data['services_rate'],
+        data['construction_rate']
+        ]
+    fig1, ax1 = plt.subplots()
+    ax1.pie(values, labels=name, autopct='%1.1f%%')
+    ax1.axis('equal')
+    plt.show()
+
 
 def printpop(code):
     
@@ -170,4 +229,5 @@ def main(code):
     T2 = logement92(code)
     T3 = budgets(code)
     T4 = newdata92(code)
+    #T5 = Entreprise92(code)
     return [T1[0]+T2[0]+T3[0]+T4[0],T1[1]+T2[1]+T3[1]+T4[1]]
