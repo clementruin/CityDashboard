@@ -21,12 +21,14 @@ def population92(code):
     #print('Evolution de la population entre 2009 et 2014 : ', data['evol'], '%')
     #printpop(code)
     indics = [ 
+        'code insee',
         'Part de la population de moins de 25 ans', 
         'Part de la population de moins de 65 ans',
         'Part de la population de plus de 65 ans',
         'Evolution de la population entre 2009 et 2014'
         ]
     values = [
+        code,
         data['25'],
         data['25']+data['64'],
         data['65+'],
