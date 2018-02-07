@@ -27,7 +27,7 @@
 		var data1;
 
 		// données à afficher
-		d3.json("static_dic/logement.json", function (data) {
+		d3.json("static/logement.json", function (data) {
 			 data1 = canvas1.selectAll("g")
 					.data(data)
 					.enter()
@@ -42,7 +42,7 @@
 		})
 
 		// chargement de la map
-		d3.json("static_dic/idf.geojson", function (data) {
+		d3.json("static/idf.geojson", function (data) {
 
 			// boite pour afficher les tags sur la map
 			var mouse_div = d3.select("div").append("div")	
@@ -167,7 +167,7 @@
 		var z = d3.scaleOrdinal()
 		    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-		d3.json("static_dic/budgetsD3.json", function(data) {
+		d3.json("static/budgetsD3.json", function(data) {
 
 		  d3.select(".randomize")
 		  	.on("click", function() {
