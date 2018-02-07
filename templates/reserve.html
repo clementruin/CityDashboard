@@ -1,0 +1,79 @@
+		var dataArray = [20, 40, 50, 60, 5, 35, 54, 46];
+		var width = 500;
+		var height = 200;
+
+		var widthScale = d3.scale.linear()
+						.domain([0, 60])
+						.range([0, width]);
+
+		var color = d3.scale.linear()
+						.domain([0, 60])
+						.range(["red", "blue"]);
+
+		var axis = d3.svg.axis()
+					.scale(widthScale);
+		
+		var canvas = d3.select("body")
+						.append("svg")
+						.attr("width", width)
+						.attr("height", height)
+						.append("g")
+						.attr("transform", "translate(50, 50)");
+
+		var bars = canvas.selectAll("rect")
+						.data(dataArray)
+						.enter()
+							.append("rect")
+							.transition()
+							.duration(1500)
+							.attr("width", function(d) { return widthScale(d);})
+							.attr("height", 10)
+							.attr("y", function(d, i) {return 11*i;})
+							.attr("fill", function(d) {return color(d);});
+
+		canvas.append("g")
+			.attr("transform", "translate(0,100)")
+			.call(axis);
+
+		d3.json("test.json", function(data) {
+
+			var canvas = d3.select("body").append("svg")
+						.attr("height", 300)
+						.attr("width", 500)
+
+			console.log("hi")
+
+			canvas.selectAll("rect")
+				.data(data)
+				.enter()
+					.append("rect")
+					.transition()
+					.duration(1000)
+					.attr("width", function(d) {return d["2000"];})
+					.attr("height", 45)
+					.attr("y", function(d,i) {return i*50;})
+					.attr("fill", "blue")
+
+			canvas.selectAll("text")
+				.data(data)
+				.enter()
+					.append("text")
+					.attr("fill", "white")
+					.attr("y", function(d,i) {return i*50+25;})
+					.attr("x", 5)
+					.text(function(d) {return d.inseecode;})
+		})
+
+		var xPos = d3.mouse(this)[0]-15;
+		var yPos = d3.mouse(this)[0]-55;
+		tooltip.attr("tranform", "translate("+xPos+","+yPos+")")
+		tooltip.style("display", null)
+					var tooltip = d3.select("body").append("svg").append("g")
+				.attr("class", "tooltip")
+				.style("display", "None")
+
+			tooltip.append("text")
+					.attr("x", 15)
+					.attr("dy", 1)
+					.style("font-size", 12)
+					.attr("font-color", "black")

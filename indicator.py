@@ -201,6 +201,7 @@ def Graph_entreprises(code):
     fig1, ax1 = plt.subplots()
     ax1.pie(values, labels=name, autopct='%1.1f%%')
     ax1.axis('equal')
+    plt.title("Secteurs d'activité - Antony")
     plt.show()
 
 
@@ -210,7 +211,7 @@ def printpop(code):
     file_pop = json.load(reader_pop)
     data = file_pop[code]
 
-    ages = ['-25', '25-64', '65+']
+    ages = ['-25 ans ', '25-64 ans', '65+ ans']
     data = [data['25'], data['64'], data['65+']]
     
     explode=np.zeros(len(data))
@@ -221,6 +222,7 @@ def printpop(code):
 
     plt.pie(data, explode=explode, labels=ages, autopct='%1.1f%%', startangle=90, shadow=True)
     plt.axis('equal')
+    plt.title("Répartition des ages dans la population - Antony")
     plt.show()
     
 

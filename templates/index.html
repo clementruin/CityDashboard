@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>D3 Demo</title>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+	<script>
+
+		/// AFFICHAGE MAP /// 
+
+		d3.select("body").append("div")
+
+		var canvas = d3.select("div").append("svg")
+						.attr("height", 700)
+						.attr("width", 700) 
+
+		var canvas1 = d3.select("div").append("svg")
+						.attr("height", 1)
+						.attr("width", 1) 
+
+		var group;
+		var areas;
+		var data1;
+
+		// données à afficher
+		d3.json("static/logement.json", function (data) {
+			 data1 = canvas1.selectAll("g")
+					.data(data)
+					.enter()
+						.append("g")
+						.attr('id', function (d) {
+							return d.inseecode;
+						})
+						.attr("intensity", function (d) {
+							return d.portion_hlm_tenant;
+						})._groups[0]
+
+		})
+
+		// chargement de la map
+		d3.json("static/idf.geojson", function (data) {
+
+			// boite pour afficher les tags sur la map
+			var mouse_div = d3.select("div").append("div")	
+    				.attr("class", "tooltip")				
+    				.style("opacity", 0);
+
+    		// échelle de couleur 
+			var color = d3.scaleLinear()
+						.domain([0, 60])
+						.range(["white", "steelblue"]);
+
+			// groupe de toutes les communes
+			group = canvas.selectAll("g")
+						.data(data.features)
+						.enter()
+							.append("g")
+
+			// projection et path de projection 
+			var projection = d3.geoMercator().scale(12000).translate([-200,12000]);
+
+			var path = d3.geoPath().projection(projection);
+
+
+			// représentation de chaque communes : couleur et mouse tag
+			areas = group.append("path")
+						.attr("d", path)
+						.attr("class", "area")
+						.attr("fill", function (d) {
+							for (i=0; i<data1.length; i++) {
+								if (data1[i].id==d.properties.code) {
+									return color(data1[i].getAttribute("intensity"));
+									}
+								}
+							})
+						.on("mouseover", function (d) {
+                			mouse_div.text(d.properties.nom)
+                				.style("opacity", 1)
+                				.style("left", (d3.event.pageX) + "px")     
+           						.style("top", (d3.event.pageY - 30) + "px");	
+						})
+						.on("mouseout", function (d) {
+							mouse_div.style("opacity", 0);
+						})
+
+		})
+
+
+		/// AFFICHAGE PIE CHART ///
+
+		var width = 300
+		var height = 300
+		var r = 100
+		var e = 40 //épaissur < r
+		var color = d3.schemeCategory20c
+
+	    data = [
+	    		{"label":"-25 ans", "value":20}, 
+	            {"label":"25-64 ans", "value":50}, 
+	            {"label":"+65 ans", "value":30}
+	            ];
+	    
+	    var vis = d3.select("body")
+	        .append("svg")
+	        .data([data])
+	            .attr("width", width)
+	            .attr("height", height)
+	        .append("g")
+	            .attr("transform", "translate(" + r + "," + r + ")")
+
+	    var arc = d3.arc()
+	        .outerRadius(r)
+	        .innerRadius(r-e)
+	        .cornerRadius(3)
+	        .padAngle(0.015);
+
+	    var pie = d3.pie()
+	        .value(function(d) { return d.value; });
+
+	    var arcs = vis.selectAll("slice")
+	        .data(pie)
+	        .enter()
+	            .append("g")
+	                .attr("class", "slice");
+
+	    arcs.append("path")
+	            .attr("fill", function(d, i) { return color[i]; } )
+	            .attr("d", arc)
+
+	    arcs.append("text")
+	    		.attr("class", "tag")
+	            .attr("transform", function(d) {
+	            d.innerRadius = 0;
+	            d.outerRadius = r;
+	            return "translate(" + arc.centroid(d) + ")";
+	            })
+	            .text(function(d, i) { return data[i].label; });  
+
+	    /// AFICHAGE BAR GRPAH ///
+
+	    var canvas3 = d3.select("body").append("div")
+
+		var svg = canvas3.append("svg")
+					.attr("width", 1000)
+	    			.attr("height", 700)
+	    			.attr("top", 200)
+		    
+		var margin = {top: 100, right: 20, bottom: 30, left: 40},
+		    width = +svg.attr("width") - margin.left - margin.right,
+		    height = +svg.attr("height") - margin.top - margin.bottom,
+		    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var x0 = d3.scaleBand()
+		    .rangeRound([0, width])
+		    .paddingInner(0.1);
+
+		var x1 = d3.scaleBand()
+		    .padding(0.05);
+
+		var y = d3.scaleLinear()
+		    .rangeRound([height, 0]);
+
+		var z = d3.scaleOrdinal()
+		    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+		d3.json("static/budgetsD3.json", function(data) {
+
+		  d3.select(".randomize")
+		  	.on("click", function() {
+		  		var j = Math.round(10*Math.random(),1)
+		  		change(data, j)})
+
+		  change(data, {{ city_index }})
+
+		  function change(data, j) {
+
+		  	  svg.selectAll(".trans").remove()
+		  	  svg.selectAll(".axis").remove()
+
+		 	  canvas3.exit().remove()
+			  data = data[j]["years"]
+
+			  var keys = Object.keys(data[0]["values"]);
+			  var year_keys = data.map(function(d) {return d["year"];})
+
+			  x0.domain(year_keys);
+			  x1.domain(keys).rangeRound([0, x0.bandwidth()]);
+
+			  y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return d["values"][key]; }); })]).nice();
+
+			  g.append("g")
+			    .selectAll("g")
+			    .data(data)
+			    .enter()
+			    	.append("g")
+			    	.attr("class", "trans")
+			      	.attr("transform", function(d) { return "translate(" + x0(d["year"]) + ",0)"; })
+			    .selectAll("rect")
+			    .data(function(d) { return keys.map(function(key) { return {key: key, value: d["values"][key]}; }); })
+			    .enter().append("rect")
+			      .attr("x", function(d) { return x1(d.key); })
+			      .attr("width", x1.bandwidth())
+			      .attr("y", height)
+			      .attr("height", 0)
+			      .transition().duration(1000)
+			      	.attr("height", function(d) { return height-y(d.value); })
+			      	.attr("y", function(d) { return y(d.value);})
+			      	.attr("fill", function(d) { return z(d.key); });
+
+			  g.append("g")
+			      .attr("class", "axis")
+			      .attr("transform", "translate(0," + height + ")")
+			      .call(d3.axisBottom(x0));
+
+			  g.append("g")
+			      .attr("class", "axis")
+			      .call(d3.axisLeft(y).ticks(null, "s"))
+			    .append("text")
+			      .attr("x", 10)
+			      .attr("y", y(y.ticks().pop()) + 0.5)
+			      .attr("dy", "0.32em")
+			      .attr("fill", "#000")
+			      .attr("font-weight", "bold")
+			      .attr("text-anchor", "start")
+			      .text("Euros");
+
+			  var legend = svg.append("g")
+			      .attr("font-family", "sans-serif")
+			      .attr("font-size", 10)
+			      .attr("text-anchor", "end")
+			    .selectAll("g")
+			    .data(keys.slice().reverse())
+			    .enter().append("g")
+			      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+			  legend.append("rect")
+			      .attr("x", width - 19)
+			      .attr("width", 19)
+			      .attr("height", 19)
+			      .attr("fill", z);
+
+			  legend.append("text")
+			      .attr("x", width - 24)
+			      .attr("y", 9.5)
+			      .attr("dy", "0.32em")
+			      .text(function(d) { return d; });
+			}
+		});
+
+	</script>
+	<button class="randomize">Other city</button>
+</body>
+
+</html>
