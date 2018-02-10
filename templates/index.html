@@ -140,14 +140,29 @@
 	            })
 	            .text(function(d, i) { return data[i].label; });  
 
+	    </script>
+
+	    <h1>Budget des communes</h1>
+
+	    <script type="text/javascript">
 	    /// AFICHAGE BAR GRPAH ///
+
+	    d3.select("body").append("h1").text("code insee : "+{{ city_code }})
 
 	    var canvas3 = d3.select("body").append("div")
 
+	    // graph
 		var svg = canvas3.append("svg")
 					.attr("width", 1000)
 	    			.attr("height", 700)
 	    			.attr("top", 200)
+
+
+	    // legend
+	    var svg2 = canvas3.append("svg")
+						.attr("width", 1500)
+	    				.attr("height", 100)
+	    				.attr("class", "legend")
 		    
 		var margin = {top: 100, right: 20, bottom: 30, left: 40},
 		    width = +svg.attr("width") - margin.left - margin.right,
@@ -167,30 +182,112 @@
 		var z = d3.scaleOrdinal()
 		    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
+		var keys_user;
+
+		var keys_all;
+
+		function remove(arr, what) {
+    		var found = arr.indexOf(what);
+
+    		while (found !== -1) {
+        		arr.splice(found, 1);
+        		found = arr.indexOf(what);
+			    }
+			}
+
+		// création des boutons
+		function build_legend(keys_user) {
+
+			//d3.selectAll(".legend").remove()
+
+			d3.json("static/budgetsD3.json", function(data) {
+				keys_all = Object.keys(data[0]["years"][0]["values"]);
+
+				//svg2.selectAll("g").remove();
+
+				var legend = svg2.selectAll("g")
+								.data(keys_all)
+								.enter()
+									.append("g")
+									.attr("width", 60)
+									.attr("heigth", 35)
+									.attr("font-family", "sans-serif")
+								    .attr("font-size", 12)
+								    .attr("text-anchor", "middle")
+								    .attr("transform", function(d, i) { return "translate(" + i * 60 + ", 0)"; })
+								    //.attr("opacity", function(d) {
+								    //	console.log(keys_user.indexOf(d)>=0)
+								    //	if (keys_user.indexOf(d)>=0) {
+								    //		return 1;} 
+								    //	else {return 0.3;}
+								    //})
+
+				legend.append("rect")
+					.attr("fill", function(d) { return z(d); })
+					.attr("class","lrect")
+
+				legend.append("text")
+					.attr("x", function(k,i) {return 28;})
+					.attr("y", 20)
+					.text(function(k) {return k;})
+
+				legend.append("rect")
+					.attr("class","lbutton")
+					.attr("opacity", function(d) {
+						console.log(keys_user.indexOf(d)>=0)
+						if (keys_user.indexOf(d)>=0) {return 0;} 
+						else {return 0.5;}
+						})
+
+				});
+
+		}
+
+		// affichage des donées + interaction
 		d3.json("static/budgetsD3.json", function(data) {
 
-		  d3.select(".randomize")
-		  	.on("click", function() {
+		  keys_all = Object.keys(data[0]["years"][0]["values"]);
+		  keys_user = [keys_all[0]];
+		  change(data, {{ city_index }}, keys_user);
+		  build_legend(keys_user);
+
+		  d3.selectAll(".randomize")
+		  	.on("click", function() { 
 		  		var j = Math.round(10*Math.random(),1)
-		  		change(data, j)})
+		  		console.log("clic");
+		  		change(data, j, keys_user);
+		  	})
 
-		  change(data, {{ city_index }})
 
-		  function change(data, j) {
+		  svg2.selectAll(".lbutton")
+		  	.on("click", function(i) {
+		  		if (keys_user.indexOf(i)>=0) {
+		  			remove(keys_user, i);
+		  			this.attributes.opacity.value=0.5;
+		  		} else {
+		  			keys_user.push(i)
+		  			this.attributes.opacity.value=0;
+		  		}
+		  		console.log(keys_user);
+		  		change(data, 1, keys_user);
+		  	})
+
+		  function change(data, j, keys_user) {
 
 		  	  svg.selectAll(".trans").remove()
 		  	  svg.selectAll(".axis").remove()
 
-		 	  canvas3.exit().remove()
+		 	  //canvas3.exit().remove()
 			  data = data[j]["years"]
 
-			  var keys = Object.keys(data[0]["values"]);
+			  //var keys = Object.keys(data[0]["values"]);
+			  //keys = ["budget"]
 			  var year_keys = data.map(function(d) {return d["year"];})
 
 			  x0.domain(year_keys);
-			  x1.domain(keys).rangeRound([0, x0.bandwidth()]);
+			  x1.domain(keys_user).rangeRound([0, x0.bandwidth()]);
 
-			  y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return d["values"][key]; }); })]).nice();
+			  y.domain([0, d3.max(data, function(d) { return d3.max(keys_user, function(key) { return d["values"][key]; }); })]).nice();
 
 			  g.append("g")
 			    .selectAll("g")
@@ -200,7 +297,7 @@
 			    	.attr("class", "trans")
 			      	.attr("transform", function(d) { return "translate(" + x0(d["year"]) + ",0)"; })
 			    .selectAll("rect")
-			    .data(function(d) { return keys.map(function(key) { return {key: key, value: d["values"][key]}; }); })
+			    .data(function(d) { return keys_user.map(function(key) { return {key: key, value: d["values"][key]}; }); })
 			    .enter().append("rect")
 			      .attr("x", function(d) { return x1(d.key); })
 			      .attr("width", x1.bandwidth())
@@ -233,26 +330,15 @@
 			      .attr("font-size", 10)
 			      .attr("text-anchor", "end")
 			    .selectAll("g")
-			    .data(keys.slice().reverse())
+			    .data(keys_all.slice().reverse())
 			    .enter().append("g")
 			      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
-
-			  legend.append("rect")
-			      .attr("x", width - 19)
-			      .attr("width", 19)
-			      .attr("height", 19)
-			      .attr("fill", z);
-
-			  legend.append("text")
-			      .attr("x", width - 24)
-			      .attr("y", 9.5)
-			      .attr("dy", "0.32em")
-			      .text(function(d) { return d; });
 			}
 		});
 
 	</script>
 	<button class="randomize">Other city</button>
+</body>
 </body>
 
 </html>

@@ -37,3 +37,16 @@ text.tag {
     pointer-events: none;
     text-anchor: middle;
 }
+
+.lrect {
+    height:33px;
+    width: 56px;
+    text-anchor: middle;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.lbutton {
+    height:33px;
+    width: 56px;
+}
