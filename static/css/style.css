@@ -20,8 +20,7 @@ div.tooltip {
     height: 28px;					
     padding: 2px;				
     font: 12px sans-serif;		
-    background: lightsteelblue;	
-    border: 0px;		
+    border: 1px;
     border-radius: 8px;			
     pointer-events: none;			
 }
@@ -31,7 +30,6 @@ text.tag {
     height: 28px;                   
     padding: 2px;               
     font: 14px sans-serif;      
-    background: lightsteelblue; 
     border: 1px;        
     border-radius: 8px;         
     pointer-events: none;

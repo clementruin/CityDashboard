@@ -90,12 +90,17 @@
 		})
 
 
+
+
+
+
+
 		/// AFFICHAGE PIE CHART ///
 
-		var width = 300
-		var height = 300
-		var r = 100
-		var e = 40 //épaissur < r
+		var width = 600
+		var height = 600
+		var r = 150
+		var e = 60 //épaissur < r
 		var color = d3.schemeCategory20c
 
 	    data = [
@@ -106,11 +111,28 @@
 	    
 	    var vis = d3.select("body")
 	        .append("svg")
-	        .data([data])
+	        .attr("width", width)
+	        .attr("height", height)
+
+	    var circle = vis.append("g")
+	    				.attr("class", "circlebox");
+	    
+	    circle.append("circle")
+			    .attr("cx", 2*r)
+			    .attr("cy", 2*r)
+			    .attr("r", r-e-5) 
+			   	.attr("opacity", 0.05)
+			   	.attr("fill", "white");
+	   				
+	   	circle.append("text")
+	   			.attr("class", "tag")
+	   			.attr("transform", "translate("+2*r+","+2*r+")"); 
+
+	    var g = vis.data([data])
 	            .attr("width", width)
 	            .attr("height", height)
-	        .append("g")
-	            .attr("transform", "translate(" + r + "," + r + ")")
+	       		 .append("g")
+	            .attr("transform", "translate(" + 2*r + "," + 2*r + ")")
 
 	    var arc = d3.arc()
 	        .outerRadius(r)
@@ -121,15 +143,51 @@
 	    var pie = d3.pie()
 	        .value(function(d) { return d.value; });
 
-	    var arcs = vis.selectAll("slice")
+	    var arcs = g.selectAll("slice")
 	        .data(pie)
 	        .enter()
 	            .append("g")
-	                .attr("class", "slice");
 
 	    arcs.append("path")
-	            .attr("fill", function(d, i) { return color[i]; } )
+	            .attr("fill", function(d) { 
+	            	return color[d.index]; } )
 	            .attr("d", arc)
+
+	    arcs.selectAll("path")
+	            .on("mouseover", function(d) {
+	            	bigarc = d3.arc()
+	            				.outerRadius(r+3)
+	        					.innerRadius(r-e-4)
+						        .cornerRadius(3)
+						        .padAngle(0.015)
+	            	d3.select(this)
+	            		.transition().duration(200)
+	            		.attr("d", bigarc)
+	               	circle.selectAll("circle")
+	               		.transition().duration(200)
+	                	.attr("fill", function() { 
+	                		return color[d.index]; })
+	                	.attr("opacity", 1)
+	                circle.selectAll("text")
+	                	.transition().duration(200)
+	                	.text("Benchmark average:"+d.index)
+	                })
+	            .on("mouseout", function(d) {
+	                circle.selectAll("circle")
+	                	.transition().duration(200)
+	                	.attr("opacity", 0)
+	                circle.selectAll("text")
+	                	.transition().duration(200)
+	                	.text("")
+	                smallarc = d3.arc()
+	            				.outerRadius(r)
+	        					.innerRadius(r-e)
+						        .cornerRadius(3)
+						        .padAngle(0.015)
+	            	d3.select(this)
+	            		.transition().duration(300)
+	            		.attr("d", smallarc)
+	                });
 
 	    arcs.append("text")
 	    		.attr("class", "tag")
@@ -138,7 +196,10 @@
 	            d.outerRadius = r;
 	            return "translate(" + arc.centroid(d) + ")";
 	            })
-	            .text(function(d, i) { return data[i].label; });  
+	            .text(function(d, i) { return data[i].label; });
+
+
+
 
 	    </script>
 
@@ -147,7 +208,7 @@
 	    <script type="text/javascript">
 	    /// AFICHAGE BAR GRPAH ///
 
-	    d3.select("body").append("h1").text("code insee : "+{{ city_code }})
+	    d3.select("body").append("h1").text("code insee : "+ {{ city_code }})
 
 	    var canvas3 = d3.select("body").append("div")
 
@@ -163,6 +224,10 @@
 						.attr("width", 1500)
 	    				.attr("height", 100)
 	    				.attr("class", "legend")
+
+	    var mouse = d3.select("body").append("div")	
+    				.attr("class", "tooltip")				
+    				.style("opacity", 0);
 		    
 		var margin = {top: 100, right: 20, bottom: 30, left: 40},
 		    width = +svg.attr("width") - margin.left - margin.right,
@@ -195,15 +260,21 @@
 			    }
 			}
 
+		var city_code = {{ city_code }};
+
+		function getindex(index_list, city_code) {
+			for (i=0; i<index_list.length; i++) {
+				if (index_list[i]["code"]==city_code) {
+					return index_list[i]["index"]
+				}
+			}
+		}
+			
 		// création des boutons
 		function build_legend(keys_user) {
 
-			//d3.selectAll(".legend").remove()
-
 			d3.json("static/budgetsD3.json", function(data) {
 				keys_all = Object.keys(data[0]["years"][0]["values"]);
-
-				//svg2.selectAll("g").remove();
 
 				var legend = svg2.selectAll("g")
 								.data(keys_all)
@@ -215,12 +286,6 @@
 								    .attr("font-size", 12)
 								    .attr("text-anchor", "middle")
 								    .attr("transform", function(d, i) { return "translate(" + i * 60 + ", 0)"; })
-								    //.attr("opacity", function(d) {
-								    //	console.log(keys_user.indexOf(d)>=0)
-								    //	if (keys_user.indexOf(d)>=0) {
-								    //		return 1;} 
-								    //	else {return 0.3;}
-								    //})
 
 				legend.append("rect")
 					.attr("fill", function(d) { return z(d); })
@@ -246,9 +311,12 @@
 		// affichage des donées + interaction
 		d3.json("static/budgetsD3.json", function(data) {
 
+		  var index_list = data.map(function(d, i) {return {index: i, code : d["code"] }})
+		  var j = getindex(index_list, city_code)
+		  console.log("this is j : " + j)
 		  keys_all = Object.keys(data[0]["years"][0]["values"]);
 		  keys_user = [keys_all[0]];
-		  change(data, {{ city_index }}, keys_user);
+		  change(data, j, keys_user);
 		  build_legend(keys_user);
 
 		  d3.selectAll(".randomize")
@@ -269,19 +337,28 @@
 		  			this.attributes.opacity.value=0;
 		  		}
 		  		console.log(keys_user);
-		  		change(data, 1, keys_user);
+		  		change(data, j, keys_user);
 		  	})
+
+		  	svg2.selectAll(".lbutton")
+		  		.on("mouseover", function() {
+		  			if (this.attributes.opacity.value!=0) {
+		  			this.attributes.opacity.value=0.1;
+		  				}
+		  			})
+		  		.on("mouseout", function() {
+		  			if (this.attributes.opacity.value!=0) {
+		  			this.attributes.opacity.value=0.5;
+		  				}
+		  			})
 
 		  function change(data, j, keys_user) {
 
 		  	  svg.selectAll(".trans").remove()
 		  	  svg.selectAll(".axis").remove()
 
-		 	  //canvas3.exit().remove()
 			  data = data[j]["years"]
 
-			  //var keys = Object.keys(data[0]["values"]);
-			  //keys = ["budget"]
 			  var year_keys = data.map(function(d) {return d["year"];})
 
 			  x0.domain(year_keys);
@@ -303,6 +380,17 @@
 			      .attr("width", x1.bandwidth())
 			      .attr("y", height)
 			      .attr("height", 0)
+			      .on("mouseover", function (d) {
+                		mouse.text(d.key + " : "+ d.value)
+                			.style("opacity", 0.85)
+                			.style("left", (d3.event.pageX) + "px")     
+           					.style("top", (d3.event.pageY - 30) + "px")
+           					.style("background-color", z(d.key))
+           					.style("border-color", "rgb(14,14,14)");
+						})
+				  .on("mouseout", function (d) {
+						mouse.style("opacity", 0);
+					})
 			      .transition().duration(1000)
 			      	.attr("height", function(d) { return height-y(d.value); })
 			      	.attr("y", function(d) { return y(d.value);})
