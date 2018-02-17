@@ -48,3 +48,8 @@ text.tag {
     height:33px;
     width: 56px;
 }
+
+#tr:hover
+#{
+#    background-color: #FFFF6B;	
+#}
