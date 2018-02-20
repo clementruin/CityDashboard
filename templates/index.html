@@ -8,6 +8,7 @@
 </head>
 
 <body>
+	<h1>Map interactive</h1>
 	<script>
 
 		/// AFFICHAGE MAP /// 
@@ -80,6 +81,7 @@
 						.on("mouseover", function (d) {
                 			mouse_div.text(d.properties.nom)
                 				.style("opacity", 1)
+                				.style("background-color", "lightsteelblue")
                 				.style("left", (d3.event.pageX) + "px")     
            						.style("top", (d3.event.pageY - 30) + "px");	
 						})
@@ -92,9 +94,11 @@
 
 
 
+	</script>
 
+	<h1>Pie charts</h1>
 
-
+	<script>
 		/// AFFICHAGE PIE CHART ///
 
 		var width = 600
@@ -201,14 +205,16 @@
 
 
 
-	    </script>
+	</script>
 
-	    <h1>Budget des communes</h1>
+	<h1>Bar graph interactif</h1>
 
-	    <script type="text/javascript">
+	<button class="randomize">Other city</button>
+
+	<script type="text/javascript">
 	    /// AFICHAGE BAR GRPAH ///
 
-	    d3.select("body").append("h1").text("code insee : "+ {{ city_code }})
+	    d3.select("body").append("h3").text("code insee : "+ {{ city_code }})
 
 	    var canvas3 = d3.select("body").append("div")
 
@@ -222,7 +228,7 @@
 	    // legend
 	    var svg2 = canvas3.append("svg")
 						.attr("width", 1500)
-	    				.attr("height", 100)
+	    				.attr("height", 60)
 	    				.attr("class", "legend")
 
 	    var mouse = d3.select("body").append("div")	
@@ -425,7 +431,64 @@
 		});
 
 	</script>
-	<button class="randomize">Other city</button>
+
+	<h1>Classements dans le benchmark</h1>
+
+	<script type="text/javascript">
+	// AFFICHAGE RANKING 
+
+	var canvas4 = d3.select("body")
+					.append("div")
+						.attr("id", "page-wrap")
+						.attr("width", 1000)
+						.attr("hieght", 1000)
+
+
+	  d3.json("static/test.json", function(data) {
+		  
+		  var sortAscending = true;
+		  var table = d3.select('#page-wrap').append('table');
+		  var titles = Object.keys(data[0]);
+		  var headers = table.append('thead').append('tr')
+		                   .selectAll('th')
+		                   .data(titles).enter()
+		                   .append('th')
+		                   .text(function (d) {
+			                    return d;
+		                    })
+		                   .on('click', function (d) {
+		                	   headers.attr('class', 'header');
+		                	   
+		                	   if (sortAscending) {
+		                	     rows.sort(function(a, b) { return b[d] < a[d]; });
+		                	     sortAscending = false;
+		                	     this.className = 'aes';
+		                	   } else {
+		                		 rows.sort(function(a, b) { return b[d] > a[d]; });
+		                		 sortAscending = true;
+		                		 this.className = 'des';
+		                	   }
+		                	   
+		                   });
+		  
+		  var rows = table.append('tbody').selectAll('tr')
+		               .data(data).enter()
+		               .append('tr');
+		  rows.selectAll('td')
+		    .data(function (d) {
+		    	return titles.map(function (k) {
+		    		return { 'value': d[k], 'name': k};
+		    	});
+		    }).enter()
+		    .append('td')
+		    .attr('data-th', function (d) {
+		    	return d.name;
+		    })
+		    .text(function (d) {
+		    	return d.value;
+		    });
+	  });
+	</script>
 </body>
 </body>
 

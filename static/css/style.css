@@ -48,3 +48,23 @@ text.tag {
     height:33px;
     width: 56px;
 }
+
+table { 
+    width: 60%; 
+    border-collapse: collapse; 
+}
+
+th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+    cursor: s-resize;
+    background-repeat: no-repeat;
+    background-position: 3% center;
+}
+
+td, th { 
+    padding: 6px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+}
