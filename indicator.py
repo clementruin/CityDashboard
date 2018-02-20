@@ -224,7 +224,27 @@ def printpop(code):
     plt.axis('equal')
     plt.title("Répartition des ages dans la population - Antony")
     plt.show()
-    
+ 
+
+#def correlation_invest_parti(code):
+#    
+#    reader_ND = open('static_dic/partis.json', 'r')
+#    file_ND = json.load(reader_ND)
+#    data = file_ND[code]
+#    
+#    reader = open('static_dic/budgets.json', 'r')
+#    file = json.load(reader_ND)
+#    data2 = file[code]
+#
+#
+#    data = [data['partis']
+#    data2 = [data['total des emplois d investissement']]
+#
+#
+#    plot(data2,data)
+#    ax1.pie(values, labels=name, autopct='%1.1f%%')
+#    ax1.axis('Investissement et parti politique")
+#    plt.show()   
 
 def main(code):
     T1 = population92(code)
