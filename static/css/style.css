@@ -49,6 +49,7 @@ text.tag {
     width: 56px;
 }
 
+<<<<<<< HEAD
 table { 
     width: 60%; 
     border-collapse: collapse; 
@@ -67,4 +68,9 @@ td, th {
     padding: 6px; 
     border: 1px solid #ccc; 
     text-align: left; 
+}
+
+tr:hover
+{
+    background-color: #FFFF6B;	
 }
