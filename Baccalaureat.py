@@ -43,7 +43,8 @@ for i in range(2012, 2017):
     bac_dico[annee] = dico
 
     readfile.close()
-    
+
+
 ### Données de 2017
 # Scraping web
 
@@ -58,6 +59,7 @@ for line in reader:
     
 def city_to_code(city):
     return city_dico[city]
+
 
 def departement_to_academy(dept_number):
     if dept_number == '75':
@@ -107,9 +109,47 @@ for i in range(1, 41):
         dico[lycee] = sub_dico
 
 bac_dico[2017] = dico
+
+
+### Données de 2008 à 2011
+# Scraping pdf2html
+
+for i in range(2008,2009):
+    dico = {}
+
+    for j in range(75,76):
+        lycee_number = len(BeautifulSoup(open('E:\Centrale Paris\Projet Inno - Mantic Data\IdF\pdf\Bac_%d_%d/Bac_%d_%d_ind.html' % (j, i, j, i), 'r', encoding='utf-8').read(), "html.parser").find_all('a'))
+        
+        for k in range(1,lycee_number+1):
+            
+            page = open('E:\Centrale Paris\Projet Inno - Mantic Data\IdF\pdf\Bac_%d_%d/Bac_%d_%d-%d.html' % (j, i, j, i, k), 'r', encoding='utf-8')
+            r = page.read()
+
+            soup = BeautifulSoup(r, "html.parser")
+
+            lycee = soup.find_all("p", class_="ft00")[0].find('b').text.replace('\xa0', ' ')
     
+            ville = soup.find_all("p", class_="ft01")[0].find('b').text.replace('\xa0', ' ').split('-')[0].strip()
+
+            secteur = "Public" if "public" in soup.find_all("p", class_="ft01")[0].find('b').text.replace('\xa0', ' ').split('-')[-1] else "Privé"
+            
+            try:
+                resultat = soup.find_all("p", class_="ft05")[1].find('b').text
+            except:
+                resultat = None
+            
+            sub_dico = {
+                    "Ville" : ville,
+                    "Commune" : city_to_code(ville) if ville in city_dico else None,
+                    "Académie" : departement_to_academy(str(j)),
+                    "Secteur" : secteur,
+                    "Résultat" : resultat
+                    }
+            dico[lycee] = sub_dico
     
+    bac_dico[i] = dico
+        
 ### Compilation dans un fichier json
 
-with open('Bac.json', 'w') as file:
+with open('Bac1.json', 'w') as file:
     json.dump(bac_dico, file)
