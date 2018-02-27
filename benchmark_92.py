@@ -2,7 +2,7 @@ import json
 import indicator
 
 # Parameters
-POP_RANGE = 0.1   #+/- 10%
+POP_RANGE = 4   #+/- 10%
 POP_FILE = 'static_dic/population92.json'
 BUDGET_RANGE = 0.1
 BUDGET_FILE = 'static_dic/budgets.json'

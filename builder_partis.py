@@ -111,20 +111,29 @@ def clean_party_attribute(string):
 
 
 city_partis = []
-readfile = open('static_raw/city_budgets_idf.csv', 'r')
+readfile = open('static_raw/partis.csv', 'r')
 reader = csv.DictReader(readfile, delimiter=',')
 for line in reader:
-    if line["annee"]=="2015":
-        code = line["inseecode"]
-        name = line["nom"]
-        current_city_partis = []
-        data = scrap_party_date(code, name)
-        for l in data :
-            if l[0]>1979:
-                current_city_partis.append({"from":l[0], "to":l[1], "parti":l[2]})
-        city_partis.append({"code":code, "partis":current_city_partis})
-        print(code)
+    code = line["code"]
+    parti2014 = line["party"]
+    name = line["name"]
+    current_city_partis = []
+    data = scrap_party_date(code, name)
+    for l in data :
+        p2001 = "NA"
+        p2008 = "NA"
+        if l[0]>1979 and l[1]<=2001:
+            p2001 = l[2]
+        if l[0]<=1995 and l[1]>2001:
+            p2001 = l[2]
+        if l[0]>=2000 and l[1]<=2008:
+            p2008 = l[2]
+        if l[0]<2000 and l[1]>2008:
+            p2008 = l[2]
+    p2014 = parti2014
+    city_partis.append({"code":code, "partis":{"2001":p2001, "2008":p2008, "2014":p2014}})   
+    print(code)
 
 
-with open('static_dic/partis.json', 'w') as file:
+with open('static_dic/partisidf.json', 'w') as file:
     json.dump(city_partis, file)
