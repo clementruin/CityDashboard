@@ -28,6 +28,21 @@
 		var data1;
 
 		// données à afficher
+		/*
+		d3.json("static/logement.json", function (data) {
+			 data1 = canvas1.selectAll("g")
+					.data(data)
+					.enter()
+						.append("g")
+						.attr('id', function (d) {
+							return d.inseecode;
+						})
+						.attr("intensity", function (d) {
+							return d.portion_hlm_tenant;
+						})._groups[0]
+
+		})
+		*/
 		d3.json("static/logement.json", function (data) {
 			 data1 = canvas1.selectAll("g")
 					.data(data)
