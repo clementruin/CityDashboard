@@ -26,11 +26,11 @@ def scrap_party_date(postal_code, city):
     try:
         city = unidecode.unidecode(city)
         url = "https://www.google.fr/search?q={}+{}+{}".format(
-            'wikipedia', city, postal_code)
+                'wikipedia', city, postal_code)
         r = requests.get(url)
         soup = BeautifulSoup(r.text, "html.parser")
 
-        tag = soup.find_all("div", class_="kv", limit=1)
+        tag = soup.find_all("div", class_="_Oe", limit=1)
         link = tag[0].cite.text
 
         r = requests.get(link)
@@ -115,24 +115,28 @@ readfile = open('static_raw/partis.csv', 'r')
 reader = csv.DictReader(readfile, delimiter=',')
 for line in reader:
     code = line["code"]
-    parti2014 = line["party"]
-    name = line["name"]
-    current_city_partis = []
-    data = scrap_party_date(code, name)
-    for l in data :
+    if True:
+        parti2014 = line["party"]
+        name = line["name"]
+        current_city_partis = []
+        data = scrap_party_date(code, name)
+        print(code, name)
         p2001 = "NA"
         p2008 = "NA"
-        if l[0]>1979 and l[1]<=2001:
-            p2001 = l[2]
-        if l[0]<=1995 and l[1]>2001:
-            p2001 = l[2]
-        if l[0]>=2000 and l[1]<=2008:
-            p2008 = l[2]
-        if l[0]<2000 and l[1]>2008:
-            p2008 = l[2]
-    p2014 = parti2014
-    city_partis.append({"code":code, "partis":{"2001":p2001, "2008":p2008, "2014":p2014}})   
-    print(code)
+        p2014 = parti2014
+        for l in data :
+            if l[1]>2001 and l[0]<2008:
+                if p2001!="NA" and l[2]!='NA':
+                    p2001 = l[2]
+                if p2001=="NA":
+                    p2001 = l[2]
+            if l[1]>2008 and l[0]<2014:
+                if p2008!="NA" and l[2]!='NA':
+                    p2008 = l[2]
+                if p2008=="NA":
+                    p2008 = l[2] 
+        print(p2001, p2008, p2014)
+        city_partis.append({"code":code, "partis":{"2001":p2001, "2008":p2008, "2014":p2014}})
 
 
 with open('static_dic/partisidf.json', 'w') as file:
