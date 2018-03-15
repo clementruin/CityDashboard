@@ -29,8 +29,8 @@ def scrap_party_date(postal_code, city):
                 'wikipedia', city, postal_code)
         r = requests.get(url)
         soup = BeautifulSoup(r.text, "html.parser")
-
-        tag = soup.find_all("div", class_="_Oe", limit=1)
+        # tag class name to be changed regularly
+        tag = soup.find_all("div", class_="hJND5c", limit=1)
         link = tag[0].cite.text
 
         r = requests.get(link)
