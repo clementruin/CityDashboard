@@ -1,0 +1,4370 @@
+[
+  {
+    "code": 77001,
+    "chomage": 7.4
+  },
+  {
+    "code": 77002,
+    "chomage": 7.7
+  },
+  {
+    "code": 77003,
+    "chomage": 5.2
+  },
+  {
+    "code": 77004,
+    "chomage": 4.8
+  },
+  {
+    "code": 77005,
+    "chomage": 7.6
+  },
+  {
+    "code": 77006,
+    "chomage": 8.7
+  },
+  {
+    "code": 77007,
+    "chomage": 4.9
+  },
+  {
+    "code": 77008,
+    "chomage": 18.5
+  },
+  {
+    "code": 77009,
+    "chomage": 6.6
+  },
+  {
+    "code": 77010,
+    "chomage": 5.7
+  },
+  {
+    "code": 77011,
+    "chomage": 12.1
+  },
+  {
+    "code": 77012,
+    "chomage": 13.1
+  },
+  {
+    "code": 77013,
+    "chomage": 5.8
+  },
+  {
+    "code": 77014,
+    "chomage": 12.8
+  },
+  {
+    "code": 77015,
+    "chomage": 6.3
+  },
+  {
+    "code": 77016,
+    "chomage": 17.5
+  },
+  {
+    "code": 77018,
+    "chomage": 8.7
+  },
+  {
+    "code": 77019,
+    "chomage": 6.1
+  },
+  {
+    "code": 77020,
+    "chomage": 6.7
+  },
+  {
+    "code": 77021,
+    "chomage": 7.6
+  },
+  {
+    "code": 77022,
+    "chomage": 12.1
+  },
+  {
+    "code": 77023,
+    "chomage": 9
+  },
+  {
+    "code": 77024,
+    "chomage": 11.6
+  },
+  {
+    "code": 77025,
+    "chomage": 8.7
+  },
+  {
+    "code": 77026,
+    "chomage": 14.3
+  },
+  {
+    "code": 77027,
+    "chomage": 14.7
+  },
+  {
+    "code": 77028,
+    "chomage": 5.9
+  },
+  {
+    "code": 77029,
+    "chomage": 9.7
+  },
+  {
+    "code": 77030,
+    "chomage": 7.1
+  },
+  {
+    "code": 77031,
+    "chomage": 8.2
+  },
+  {
+    "code": 77032,
+    "chomage": 9.3
+  },
+  {
+    "code": 77033,
+    "chomage": 11.5
+  },
+  {
+    "code": 77034,
+    "chomage": 6.7
+  },
+  {
+    "code": 77035,
+    "chomage": 10.2
+  },
+  {
+    "code": 77036,
+    "chomage": 8.7
+  },
+  {
+    "code": 77037,
+    "chomage": 6.7
+  },
+  {
+    "code": 77038,
+    "chomage": 8.4
+  },
+  {
+    "code": 77039,
+    "chomage": 7.8
+  },
+  {
+    "code": 77040,
+    "chomage": 8.3
+  },
+  {
+    "code": 77041,
+    "chomage": 6.3
+  },
+  {
+    "code": 77042,
+    "chomage": 10.6
+  },
+  {
+    "code": 77043,
+    "chomage": 11.6
+  },
+  {
+    "code": 77044,
+    "chomage": 5.7
+  },
+  {
+    "code": 77045,
+    "chomage": 9
+  },
+  {
+    "code": 77046,
+    "chomage": 10.1
+  },
+  {
+    "code": 77047,
+    "chomage": 8.8
+  },
+  {
+    "code": 77048,
+    "chomage": 10.1
+  },
+  {
+    "code": 77049,
+    "chomage": 6.1
+  },
+  {
+    "code": 77050,
+    "chomage": 12.8
+  },
+  {
+    "code": 77051,
+    "chomage": 14.8
+  },
+  {
+    "code": 77052,
+    "chomage": 10.6
+  },
+  {
+    "code": 77053,
+    "chomage": 9.3
+  },
+  {
+    "code": 77054,
+    "chomage": 14.6
+  },
+  {
+    "code": 77055,
+    "chomage": 10.2
+  },
+  {
+    "code": 77056,
+    "chomage": 6.9
+  },
+  {
+    "code": 77057,
+    "chomage": 15
+  },
+  {
+    "code": 77058,
+    "chomage": 9.8
+  },
+  {
+    "code": 77059,
+    "chomage": 11.2
+  },
+  {
+    "code": 77060,
+    "chomage": 8.9
+  },
+  {
+    "code": 77061,
+    "chomage": 8.1
+  },
+  {
+    "code": 77062,
+    "chomage": 6.5
+  },
+  {
+    "code": 77063,
+    "chomage": 9.1
+  },
+  {
+    "code": 77065,
+    "chomage": 6.5
+  },
+  {
+    "code": 77066,
+    "chomage": 14.5
+  },
+  {
+    "code": 77067,
+    "chomage": 8.3
+  },
+  {
+    "code": 77068,
+    "chomage": 7.4
+  },
+  {
+    "code": 77069,
+    "chomage": 10.6
+  },
+  {
+    "code": 77070,
+    "chomage": 10.3
+  },
+  {
+    "code": 77071,
+    "chomage": 11.1
+  },
+  {
+    "code": 77072,
+    "chomage": 10.5
+  },
+  {
+    "code": 77073,
+    "chomage": 4.6
+  },
+  {
+    "code": 77075,
+    "chomage": 11.7
+  },
+  {
+    "code": 77076,
+    "chomage": 10.6
+  },
+  {
+    "code": 77077,
+    "chomage": 7
+  },
+  {
+    "code": 77078,
+    "chomage": 11.7
+  },
+  {
+    "code": 77079,
+    "chomage": 15.8
+  },
+  {
+    "code": 77080,
+    "chomage": 12.6
+  },
+  {
+    "code": 77081,
+    "chomage": 6.4
+  },
+  {
+    "code": 77082,
+    "chomage": 8
+  },
+  {
+    "code": 77083,
+    "chomage": 13.2
+  },
+  {
+    "code": 77084,
+    "chomage": 8.9
+  },
+  {
+    "code": 77085,
+    "chomage": 8.5
+  },
+  {
+    "code": 77086,
+    "chomage": 11.4
+  },
+  {
+    "code": 77087,
+    "chomage": 9.4
+  },
+  {
+    "code": 77088,
+    "chomage": 10.1
+  },
+  {
+    "code": 77089,
+    "chomage": 6.1
+  },
+  {
+    "code": 77090,
+    "chomage": 9.8
+  },
+  {
+    "code": 77091,
+    "chomage": 5.4
+  },
+  {
+    "code": 77093,
+    "chomage": 12.1
+  },
+  {
+    "code": 77094,
+    "chomage": 7
+  },
+  {
+    "code": 77095,
+    "chomage": 6.3
+  },
+  {
+    "code": 77096,
+    "chomage": 5.2
+  },
+  {
+    "code": 77097,
+    "chomage": 4.7
+  },
+  {
+    "code": 77098,
+    "chomage": 9.9
+  },
+  {
+    "code": 77099,
+    "chomage": 14.2
+  },
+  {
+    "code": 77100,
+    "chomage": 9.8
+  },
+  {
+    "code": 77101,
+    "chomage": 12.3
+  },
+  {
+    "code": 77102,
+    "chomage": 4.9
+  },
+  {
+    "code": 77103,
+    "chomage": 4.8
+  },
+  {
+    "code": 77104,
+    "chomage": 4.5
+  },
+  {
+    "code": 77106,
+    "chomage": 9.5
+  },
+  {
+    "code": 77107,
+    "chomage": 8.8
+  },
+  {
+    "code": 77108,
+    "chomage": 11.9
+  },
+  {
+    "code": 77109,
+    "chomage": 11.5
+  },
+  {
+    "code": 77110,
+    "chomage": 8.5
+  },
+  {
+    "code": 77111,
+    "chomage": 8.5
+  },
+  {
+    "code": 77112,
+    "chomage": 2
+  },
+  {
+    "code": 77113,
+    "chomage": 10
+  },
+  {
+    "code": 77114,
+    "chomage": 6.8
+  },
+  {
+    "code": 77115,
+    "chomage": 7.4
+  },
+  {
+    "code": 77116,
+    "chomage": 8.2
+  },
+  {
+    "code": 77117,
+    "chomage": 11.6
+  },
+  {
+    "code": 77118,
+    "chomage": 9.8
+  },
+  {
+    "code": 77119,
+    "chomage": 8.8
+  },
+  {
+    "code": 77120,
+    "chomage": 13
+  },
+  {
+    "code": 77121,
+    "chomage": 10.6
+  },
+  {
+    "code": 77122,
+    "chomage": 10.9
+  },
+  {
+    "code": 77123,
+    "chomage": 7.9
+  },
+  {
+    "code": 77124,
+    "chomage": 8.5
+  },
+  {
+    "code": 77125,
+    "chomage": 8.4
+  },
+  {
+    "code": 77126,
+    "chomage": 10.7
+  },
+  {
+    "code": 77127,
+    "chomage": 6.2
+  },
+  {
+    "code": 77128,
+    "chomage": 8.7
+  },
+  {
+    "code": 77129,
+    "chomage": 13.2
+  },
+  {
+    "code": 77130,
+    "chomage": 10.3
+  },
+  {
+    "code": 77131,
+    "chomage": 15.3
+  },
+  {
+    "code": 77132,
+    "chomage": 6.8
+  },
+  {
+    "code": 77133,
+    "chomage": 4.3
+  },
+  {
+    "code": 77134,
+    "chomage": 4.2
+  },
+  {
+    "code": 77135,
+    "chomage": 7.6
+  },
+  {
+    "code": 77136,
+    "chomage": 7.5
+  },
+  {
+    "code": 77137,
+    "chomage": 8.7
+  },
+  {
+    "code": 77138,
+    "chomage": 8.5
+  },
+  {
+    "code": 77139,
+    "chomage": 8.7
+  },
+  {
+    "code": 77140,
+    "chomage": 7.6
+  },
+  {
+    "code": 77141,
+    "chomage": 7.5
+  },
+  {
+    "code": 77142,
+    "chomage": 9.7
+  },
+  {
+    "code": 77143,
+    "chomage": 11.5
+  },
+  {
+    "code": 77144,
+    "chomage": 5.4
+  },
+  {
+    "code": 77145,
+    "chomage": 6
+  },
+  {
+    "code": 77146,
+    "chomage": 9
+  },
+  {
+    "code": 77147,
+    "chomage": 7.6
+  },
+  {
+    "code": 77148,
+    "chomage": 12.5
+  },
+  {
+    "code": 77149,
+    "chomage": 9.9
+  },
+  {
+    "code": 77150,
+    "chomage": 5.5
+  },
+  {
+    "code": 77151,
+    "chomage": 5.2
+  },
+  {
+    "code": 77152,
+    "chomage": 17.2
+  },
+  {
+    "code": 77153,
+    "chomage": 8.9
+  },
+  {
+    "code": 77154,
+    "chomage": 5.6
+  },
+  {
+    "code": 77155,
+    "chomage": 9.7
+  },
+  {
+    "code": 77156,
+    "chomage": 10.8
+  },
+  {
+    "code": 77157,
+    "chomage": 13.7
+  },
+  {
+    "code": 77158,
+    "chomage": 7
+  },
+  {
+    "code": 77159,
+    "chomage": 12.9
+  },
+  {
+    "code": 77161,
+    "chomage": 7.7
+  },
+  {
+    "code": 77162,
+    "chomage": 10.9
+  },
+  {
+    "code": 77163,
+    "chomage": 8.7
+  },
+  {
+    "code": 77164,
+    "chomage": 7.1
+  },
+  {
+    "code": 77165,
+    "chomage": 5.7
+  },
+  {
+    "code": 77167,
+    "chomage": 8.8
+  },
+  {
+    "code": 77168,
+    "chomage": 11.6
+  },
+  {
+    "code": 77169,
+    "chomage": 11.7
+  },
+  {
+    "code": 77171,
+    "chomage": 7.8
+  },
+  {
+    "code": 77172,
+    "chomage": 11.2
+  },
+  {
+    "code": 77173,
+    "chomage": 7.8
+  },
+  {
+    "code": 77174,
+    "chomage": 12.3
+  },
+  {
+    "code": 77175,
+    "chomage": 6.1
+  },
+  {
+    "code": 77176,
+    "chomage": 9.5
+  },
+  {
+    "code": 77177,
+    "chomage": 9
+  },
+  {
+    "code": 77178,
+    "chomage": 7.2
+  },
+  {
+    "code": 77179,
+    "chomage": 6.6
+  },
+  {
+    "code": 77180,
+    "chomage": 6.9
+  },
+  {
+    "code": 77181,
+    "chomage": 6.8
+  },
+  {
+    "code": 77182,
+    "chomage": 21.4
+  },
+  {
+    "code": 77183,
+    "chomage": 16.3
+  },
+  {
+    "code": 77184,
+    "chomage": 7.6
+  },
+  {
+    "code": 77185,
+    "chomage": 5.1
+  },
+  {
+    "code": 77186,
+    "chomage": 11.1
+  },
+  {
+    "code": 77187,
+    "chomage": 17
+  },
+  {
+    "code": 77188,
+    "chomage": 6.9
+  },
+  {
+    "code": 77190,
+    "chomage": 6.7
+  },
+  {
+    "code": 77191,
+    "chomage": 8.4
+  },
+  {
+    "code": 77192,
+    "chomage": 10.8
+  },
+  {
+    "code": 77193,
+    "chomage": 5.9
+  },
+  {
+    "code": 77194,
+    "chomage": 12.9
+  },
+  {
+    "code": 77195,
+    "chomage": 7.4
+  },
+  {
+    "code": 77196,
+    "chomage": 5.2
+  },
+  {
+    "code": 77197,
+    "chomage": 8.2
+  },
+  {
+    "code": 77198,
+    "chomage": 7.4
+  },
+  {
+    "code": 77199,
+    "chomage": 7.9
+  },
+  {
+    "code": 77200,
+    "chomage": 11.5
+  },
+  {
+    "code": 77201,
+    "chomage": 8.2
+  },
+  {
+    "code": 77202,
+    "chomage": 7.3
+  },
+  {
+    "code": 77203,
+    "chomage": 11.1
+  },
+  {
+    "code": 77204,
+    "chomage": 14.3
+  },
+  {
+    "code": 77205,
+    "chomage": 7.1
+  },
+  {
+    "code": 77206,
+    "chomage": 10.9
+  },
+  {
+    "code": 77207,
+    "chomage": 10.8
+  },
+  {
+    "code": 77208,
+    "chomage": 14.8
+  },
+  {
+    "code": 77209,
+    "chomage": 8.6
+  },
+  {
+    "code": 77210,
+    "chomage": 11.2
+  },
+  {
+    "code": 77211,
+    "chomage": 11
+  },
+  {
+    "code": 77212,
+    "chomage": 7.5
+  },
+  {
+    "code": 77214,
+    "chomage": 6.7
+  },
+  {
+    "code": 77215,
+    "chomage": 11.9
+  },
+  {
+    "code": 77216,
+    "chomage": 8.6
+  },
+  {
+    "code": 77217,
+    "chomage": 6.8
+  },
+  {
+    "code": 77218,
+    "chomage": 17.5
+  },
+  {
+    "code": 77219,
+    "chomage": 7.3
+  },
+  {
+    "code": 77220,
+    "chomage": 5.9
+  },
+  {
+    "code": 77221,
+    "chomage": 7.6
+  },
+  {
+    "code": 77222,
+    "chomage": 9.8
+  },
+  {
+    "code": 77223,
+    "chomage": 8.6
+  },
+  {
+    "code": 77224,
+    "chomage": 1.8
+  },
+  {
+    "code": 77225,
+    "chomage": 10.7
+  },
+  {
+    "code": 77226,
+    "chomage": 8.2
+  },
+  {
+    "code": 77227,
+    "chomage": 10.6
+  },
+  {
+    "code": 77228,
+    "chomage": 11.8
+  },
+  {
+    "code": 77229,
+    "chomage": 7.6
+  },
+  {
+    "code": 77230,
+    "chomage": 6.5
+  },
+  {
+    "code": 77231,
+    "chomage": 9.2
+  },
+  {
+    "code": 77232,
+    "chomage": 7.3
+  },
+  {
+    "code": 77233,
+    "chomage": 9.3
+  },
+  {
+    "code": 77234,
+    "chomage": 7.1
+  },
+  {
+    "code": 77235,
+    "chomage": 6.4
+  },
+  {
+    "code": 77236,
+    "chomage": 5.4
+  },
+  {
+    "code": 77237,
+    "chomage": 9.1
+  },
+  {
+    "code": 77238,
+    "chomage": 11.2
+  },
+  {
+    "code": 77239,
+    "chomage": 10.7
+  },
+  {
+    "code": 77240,
+    "chomage": 12.2
+  },
+  {
+    "code": 77241,
+    "chomage": 8.3
+  },
+  {
+    "code": 77242,
+    "chomage": 10.5
+  },
+  {
+    "code": 77243,
+    "chomage": 12.3
+  },
+  {
+    "code": 77244,
+    "chomage": 7.4
+  },
+  {
+    "code": 77245,
+    "chomage": 9.2
+  },
+  {
+    "code": 77246,
+    "chomage": 12.3
+  },
+  {
+    "code": 77247,
+    "chomage": 10.7
+  },
+  {
+    "code": 77248,
+    "chomage": 6.3
+  },
+  {
+    "code": 77249,
+    "chomage": 8.6
+  },
+  {
+    "code": 77250,
+    "chomage": 7
+  },
+  {
+    "code": 77251,
+    "chomage": 10.2
+  },
+  {
+    "code": 77252,
+    "chomage": 8.9
+  },
+  {
+    "code": 77253,
+    "chomage": 2.9
+  },
+  {
+    "code": 77254,
+    "chomage": 5.3
+  },
+  {
+    "code": 77255,
+    "chomage": 7.8
+  },
+  {
+    "code": 77256,
+    "chomage": 11.9
+  },
+  {
+    "code": 77257,
+    "chomage": 17.8
+  },
+  {
+    "code": 77258,
+    "chomage": 15.2
+  },
+  {
+    "code": 77259,
+    "chomage": 11.2
+  },
+  {
+    "code": 77260,
+    "chomage": 18.7
+  },
+  {
+    "code": 77261,
+    "chomage": 15.4
+  },
+  {
+    "code": 77262,
+    "chomage": 13.6
+  },
+  {
+    "code": 77263,
+    "chomage": 5.2
+  },
+  {
+    "code": 77264,
+    "chomage": 7.9
+  },
+  {
+    "code": 77265,
+    "chomage": 16.1
+  },
+  {
+    "code": 77266,
+    "chomage": 7.2
+  },
+  {
+    "code": 77267,
+    "chomage": 7.1
+  },
+  {
+    "code": 77268,
+    "chomage": 7.8
+  },
+  {
+    "code": 77269,
+    "chomage": 11
+  },
+  {
+    "code": 77270,
+    "chomage": 8.9
+  },
+  {
+    "code": 77271,
+    "chomage": 12.7
+  },
+  {
+    "code": 77272,
+    "chomage": 10.3
+  },
+  {
+    "code": 77273,
+    "chomage": 7.9
+  },
+  {
+    "code": 77274,
+    "chomage": 7.7
+  },
+  {
+    "code": 77275,
+    "chomage": 10.9
+  },
+  {
+    "code": 77276,
+    "chomage": 12.5
+  },
+  {
+    "code": 77277,
+    "chomage": 8.7
+  },
+  {
+    "code": 77278,
+    "chomage": 9.9
+  },
+  {
+    "code": 77279,
+    "chomage": 8.4
+  },
+  {
+    "code": 77280,
+    "chomage": 10.4
+  },
+  {
+    "code": 77281,
+    "chomage": 7.7
+  },
+  {
+    "code": 77282,
+    "chomage": 14
+  },
+  {
+    "code": 77283,
+    "chomage": 12.1
+  },
+  {
+    "code": 77284,
+    "chomage": 15.8
+  },
+  {
+    "code": 77285,
+    "chomage": 19.5
+  },
+  {
+    "code": 77286,
+    "chomage": 7.1
+  },
+  {
+    "code": 77287,
+    "chomage": 16.6
+  },
+  {
+    "code": 77288,
+    "chomage": 16.2
+  },
+  {
+    "code": 77289,
+    "chomage": 11.8
+  },
+  {
+    "code": 77290,
+    "chomage": 8.8
+  },
+  {
+    "code": 77291,
+    "chomage": 13.1
+  },
+  {
+    "code": 77292,
+    "chomage": 4.5
+  },
+  {
+    "code": 77293,
+    "chomage": 11
+  },
+  {
+    "code": 77294,
+    "chomage": 13.2
+  },
+  {
+    "code": 77295,
+    "chomage": 4
+  },
+  {
+    "code": 77296,
+    "chomage": 13.1
+  },
+  {
+    "code": 77297,
+    "chomage": 8.3
+  },
+  {
+    "code": 77298,
+    "chomage": 11.1
+  },
+  {
+    "code": 77300,
+    "chomage": 8.4
+  },
+  {
+    "code": 77301,
+    "chomage": 12.1
+  },
+  {
+    "code": 77302,
+    "chomage": 8.9
+  },
+  {
+    "code": 77303,
+    "chomage": 17.1
+  },
+  {
+    "code": 77304,
+    "chomage": 15.8
+  },
+  {
+    "code": 77305,
+    "chomage": 24.4
+  },
+  {
+    "code": 77306,
+    "chomage": 6.2
+  },
+  {
+    "code": 77307,
+    "chomage": 7.7
+  },
+  {
+    "code": 77308,
+    "chomage": 10
+  },
+  {
+    "code": 77309,
+    "chomage": 9.6
+  },
+  {
+    "code": 77310,
+    "chomage": 12.8
+  },
+  {
+    "code": 77311,
+    "chomage": 8.2
+  },
+  {
+    "code": 77312,
+    "chomage": 6.9
+  },
+  {
+    "code": 77313,
+    "chomage": 7.3
+  },
+  {
+    "code": 77314,
+    "chomage": 5.3
+  },
+  {
+    "code": 77315,
+    "chomage": 8.1
+  },
+  {
+    "code": 77316,
+    "chomage": 10.1
+  },
+  {
+    "code": 77317,
+    "chomage": 14.3
+  },
+  {
+    "code": 77318,
+    "chomage": 7.6
+  },
+  {
+    "code": 77319,
+    "chomage": 7.5
+  },
+  {
+    "code": 77320,
+    "chomage": 9.4
+  },
+  {
+    "code": 77321,
+    "chomage": 10.8
+  },
+  {
+    "code": 77322,
+    "chomage": 7.9
+  },
+  {
+    "code": 77323,
+    "chomage": 8.6
+  },
+  {
+    "code": 77325,
+    "chomage": 11.9
+  },
+  {
+    "code": 77326,
+    "chomage": 12.8
+  },
+  {
+    "code": 77327,
+    "chomage": 15.2
+  },
+  {
+    "code": 77328,
+    "chomage": 10
+  },
+  {
+    "code": 77329,
+    "chomage": 4.3
+  },
+  {
+    "code": 77330,
+    "chomage": 7.7
+  },
+  {
+    "code": 77331,
+    "chomage": 14
+  },
+  {
+    "code": 77332,
+    "chomage": 5.1
+  },
+  {
+    "code": 77333,
+    "chomage": 18.3
+  },
+  {
+    "code": 77335,
+    "chomage": 6.4
+  },
+  {
+    "code": 77336,
+    "chomage": 5
+  },
+  {
+    "code": 77337,
+    "chomage": 15.3
+  },
+  {
+    "code": 77338,
+    "chomage": 8.6
+  },
+  {
+    "code": 77339,
+    "chomage": 8.1
+  },
+  {
+    "code": 77340,
+    "chomage": 6.1
+  },
+  {
+    "code": 77341,
+    "chomage": 15.3
+  },
+  {
+    "code": 77342,
+    "chomage": 7.3
+  },
+  {
+    "code": 77343,
+    "chomage": 11.1
+  },
+  {
+    "code": 77344,
+    "chomage": 8.5
+  },
+  {
+    "code": 77345,
+    "chomage": 10.4
+  },
+  {
+    "code": 77347,
+    "chomage": 8.5
+  },
+  {
+    "code": 77348,
+    "chomage": 13.4
+  },
+  {
+    "code": 77349,
+    "chomage": 10
+  },
+  {
+    "code": 77350,
+    "chomage": 10.2
+  },
+  {
+    "code": 77352,
+    "chomage": 7.4
+  },
+  {
+    "code": 77353,
+    "chomage": 9.5
+  },
+  {
+    "code": 77354,
+    "chomage": 4.1
+  },
+  {
+    "code": 77355,
+    "chomage": 10
+  },
+  {
+    "code": 77356,
+    "chomage": 10.3
+  },
+  {
+    "code": 77357,
+    "chomage": 7.7
+  },
+  {
+    "code": 77358,
+    "chomage": 8.9
+  },
+  {
+    "code": 77359,
+    "chomage": 8
+  },
+  {
+    "code": 77360,
+    "chomage": 4.9
+  },
+  {
+    "code": 77361,
+    "chomage": 6.8
+  },
+  {
+    "code": 77363,
+    "chomage": 6.7
+  },
+  {
+    "code": 77364,
+    "chomage": 7.5
+  },
+  {
+    "code": 77365,
+    "chomage": 6.5
+  },
+  {
+    "code": 77366,
+    "chomage": 6.8
+  },
+  {
+    "code": 77367,
+    "chomage": 12.7
+  },
+  {
+    "code": 77368,
+    "chomage": 9.5
+  },
+  {
+    "code": 77369,
+    "chomage": 9
+  },
+  {
+    "code": 77370,
+    "chomage": 11.6
+  },
+  {
+    "code": 77371,
+    "chomage": 9.9
+  },
+  {
+    "code": 77372,
+    "chomage": 10.3
+  },
+  {
+    "code": 77373,
+    "chomage": 10.8
+  },
+  {
+    "code": 77374,
+    "chomage": 6.3
+  },
+  {
+    "code": 77376,
+    "chomage": 8.6
+  },
+  {
+    "code": 77377,
+    "chomage": 8
+  },
+  {
+    "code": 77378,
+    "chomage": 8.6
+  },
+  {
+    "code": 77379,
+    "chomage": 21.2
+  },
+  {
+    "code": 77380,
+    "chomage": 13.7
+  },
+  {
+    "code": 77381,
+    "chomage": 7.8
+  },
+  {
+    "code": 77382,
+    "chomage": 6.9
+  },
+  {
+    "code": 77383,
+    "chomage": 8
+  },
+  {
+    "code": 77384,
+    "chomage": 9.2
+  },
+  {
+    "code": 77385,
+    "chomage": 14.6
+  },
+  {
+    "code": 77386,
+    "chomage": 6.3
+  },
+  {
+    "code": 77387,
+    "chomage": 10.4
+  },
+  {
+    "code": 77388,
+    "chomage": 10
+  },
+  {
+    "code": 77389,
+    "chomage": 11.4
+  },
+  {
+    "code": 77390,
+    "chomage": 11.5
+  },
+  {
+    "code": 77391,
+    "chomage": 10.3
+  },
+  {
+    "code": 77392,
+    "chomage": 5.4
+  },
+  {
+    "code": 77393,
+    "chomage": 9.1
+  },
+  {
+    "code": 77394,
+    "chomage": 12
+  },
+  {
+    "code": 77395,
+    "chomage": 6.2
+  },
+  {
+    "code": 77396,
+    "chomage": 9.4
+  },
+  {
+    "code": 77397,
+    "chomage": 13.1
+  },
+  {
+    "code": 77398,
+    "chomage": 9.9
+  },
+  {
+    "code": 77399,
+    "chomage": 4.3
+  },
+  {
+    "code": 77400,
+    "chomage": 7.7
+  },
+  {
+    "code": 77401,
+    "chomage": 8.3
+  },
+  {
+    "code": 77402,
+    "chomage": 7.1
+  },
+  {
+    "code": 77403,
+    "chomage": 11.6
+  },
+  {
+    "code": 77404,
+    "chomage": 12.5
+  },
+  {
+    "code": 77405,
+    "chomage": 11.5
+  },
+  {
+    "code": 77406,
+    "chomage": 9.2
+  },
+  {
+    "code": 77407,
+    "chomage": 9.7
+  },
+  {
+    "code": 77408,
+    "chomage": 5.9
+  },
+  {
+    "code": 77409,
+    "chomage": 13.5
+  },
+  {
+    "code": 77410,
+    "chomage": 9.1
+  },
+  {
+    "code": 77411,
+    "chomage": 4
+  },
+  {
+    "code": 77412,
+    "chomage": 8.3
+  },
+  {
+    "code": 77413,
+    "chomage": 5.9
+  },
+  {
+    "code": 77414,
+    "chomage": 9.2
+  },
+  {
+    "code": 77415,
+    "chomage": 10.4
+  },
+  {
+    "code": 77416,
+    "chomage": 8.6
+  },
+  {
+    "code": 77417,
+    "chomage": 10.6
+  },
+  {
+    "code": 77418,
+    "chomage": 10.2
+  },
+  {
+    "code": 77419,
+    "chomage": 9.1
+  },
+  {
+    "code": 77420,
+    "chomage": 9.2
+  },
+  {
+    "code": 77421,
+    "chomage": 7.6
+  },
+  {
+    "code": 77423,
+    "chomage": 11.1
+  },
+  {
+    "code": 77424,
+    "chomage": 8.2
+  },
+  {
+    "code": 77425,
+    "chomage": 11.1
+  },
+  {
+    "code": 77426,
+    "chomage": 7.7
+  },
+  {
+    "code": 77427,
+    "chomage": 8.7
+  },
+  {
+    "code": 77428,
+    "chomage": 5.5
+  },
+  {
+    "code": 77429,
+    "chomage": 8.1
+  },
+  {
+    "code": 77430,
+    "chomage": 9
+  },
+  {
+    "code": 77431,
+    "chomage": 12.6
+  },
+  {
+    "code": 77432,
+    "chomage": 10.8
+  },
+  {
+    "code": 77433,
+    "chomage": 7.7
+  },
+  {
+    "code": 77434,
+    "chomage": 3.4
+  },
+  {
+    "code": 77435,
+    "chomage": 6.6
+  },
+  {
+    "code": 77436,
+    "chomage": 7.9
+  },
+  {
+    "code": 77437,
+    "chomage": 10.4
+  },
+  {
+    "code": 77438,
+    "chomage": 10.9
+  },
+  {
+    "code": 77439,
+    "chomage": 9
+  },
+  {
+    "code": 77440,
+    "chomage": 9.4
+  },
+  {
+    "code": 77441,
+    "chomage": 9.2
+  },
+  {
+    "code": 77442,
+    "chomage": 8.1
+  },
+  {
+    "code": 77443,
+    "chomage": 6.5
+  },
+  {
+    "code": 77444,
+    "chomage": 12.9
+  },
+  {
+    "code": 77445,
+    "chomage": 14.3
+  },
+  {
+    "code": 77446,
+    "chomage": 9.3
+  },
+  {
+    "code": 77447,
+    "chomage": 7.2
+  },
+  {
+    "code": 77448,
+    "chomage": 15.6
+  },
+  {
+    "code": 77449,
+    "chomage": 10.9
+  },
+  {
+    "code": 77450,
+    "chomage": 7.6
+  },
+  {
+    "code": 77451,
+    "chomage": 7.6
+  },
+  {
+    "code": 77452,
+    "chomage": 10.7
+  },
+  {
+    "code": 77453,
+    "chomage": 7.2
+  },
+  {
+    "code": 77454,
+    "chomage": 7.3
+  },
+  {
+    "code": 77455,
+    "chomage": 9.7
+  },
+  {
+    "code": 77456,
+    "chomage": 10.2
+  },
+  {
+    "code": 77457,
+    "chomage": 7.2
+  },
+  {
+    "code": 77458,
+    "chomage": 20.5
+  },
+  {
+    "code": 77459,
+    "chomage": 9.8
+  },
+  {
+    "code": 77460,
+    "chomage": 7.4
+  },
+  {
+    "code": 77461,
+    "chomage": 7.3
+  },
+  {
+    "code": 77462,
+    "chomage": 7.8
+  },
+  {
+    "code": 77463,
+    "chomage": 7.6
+  },
+  {
+    "code": 77464,
+    "chomage": 10.2
+  },
+  {
+    "code": 77465,
+    "chomage": 8.7
+  },
+  {
+    "code": 77466,
+    "chomage": 6.6
+  },
+  {
+    "code": 77467,
+    "chomage": 16.2
+  },
+  {
+    "code": 77468,
+    "chomage": 14
+  },
+  {
+    "code": 77469,
+    "chomage": 10.1
+  },
+  {
+    "code": 77470,
+    "chomage": 12
+  },
+  {
+    "code": 77471,
+    "chomage": 12
+  },
+  {
+    "code": 77472,
+    "chomage": 9.8
+  },
+  {
+    "code": 77473,
+    "chomage": 6.2
+  },
+  {
+    "code": 77474,
+    "chomage": 6.7
+  },
+  {
+    "code": 77475,
+    "chomage": 9.8
+  },
+  {
+    "code": 77476,
+    "chomage": 7.9
+  },
+  {
+    "code": 77477,
+    "chomage": 10.3
+  },
+  {
+    "code": 77478,
+    "chomage": 12.8
+  },
+  {
+    "code": 77479,
+    "chomage": 11.4
+  },
+  {
+    "code": 77480,
+    "chomage": 8.2
+  },
+  {
+    "code": 77481,
+    "chomage": 12.8
+  },
+  {
+    "code": 77482,
+    "chomage": 16.9
+  },
+  {
+    "code": 77483,
+    "chomage": 10.2
+  },
+  {
+    "code": 77484,
+    "chomage": 5.1
+  },
+  {
+    "code": 77485,
+    "chomage": 8.5
+  },
+  {
+    "code": 77486,
+    "chomage": 11.6
+  },
+  {
+    "code": 77487,
+    "chomage": 8.1
+  },
+  {
+    "code": 77489,
+    "chomage": 15.9
+  },
+  {
+    "code": 77490,
+    "chomage": 10.9
+  },
+  {
+    "code": 77491,
+    "chomage": 9.4
+  },
+  {
+    "code": 77492,
+    "chomage": 12.6
+  },
+  {
+    "code": 77493,
+    "chomage": 9.4
+  },
+  {
+    "code": 77494,
+    "chomage": 8.3
+  },
+  {
+    "code": 77495,
+    "chomage": 8.7
+  },
+  {
+    "code": 77496,
+    "chomage": 7.4
+  },
+  {
+    "code": 77498,
+    "chomage": 5
+  },
+  {
+    "code": 77500,
+    "chomage": 9.3
+  },
+  {
+    "code": 77501,
+    "chomage": 8.6
+  },
+  {
+    "code": 77504,
+    "chomage": 6.3
+  },
+  {
+    "code": 77505,
+    "chomage": 9.8
+  },
+  {
+    "code": 77506,
+    "chomage": 8.7
+  },
+  {
+    "code": 77507,
+    "chomage": 11.2
+  },
+  {
+    "code": 77508,
+    "chomage": 9.3
+  },
+  {
+    "code": 77509,
+    "chomage": 10.9
+  },
+  {
+    "code": 77510,
+    "chomage": 5.4
+  },
+  {
+    "code": 77511,
+    "chomage": 9.2
+  },
+  {
+    "code": 77512,
+    "chomage": 12.6
+  },
+  {
+    "code": 77513,
+    "chomage": 8.4
+  },
+  {
+    "code": 77514,
+    "chomage": 11.6
+  },
+  {
+    "code": 77515,
+    "chomage": 8.5
+  },
+  {
+    "code": 77516,
+    "chomage": 7.6
+  },
+  {
+    "code": 77517,
+    "chomage": 8
+  },
+  {
+    "code": 77518,
+    "chomage": 5.9
+  },
+  {
+    "code": 77519,
+    "chomage": 14.2
+  },
+  {
+    "code": 77520,
+    "chomage": 4.3
+  },
+  {
+    "code": 77521,
+    "chomage": 8.7
+  },
+  {
+    "code": 77522,
+    "chomage": 13.4
+  },
+  {
+    "code": 77523,
+    "chomage": 7.3
+  },
+  {
+    "code": 77524,
+    "chomage": 12.1
+  },
+  {
+    "code": 77525,
+    "chomage": 11.6
+  },
+  {
+    "code": 77526,
+    "chomage": 5.1
+  },
+  {
+    "code": 77527,
+    "chomage": 10.2
+  },
+  {
+    "code": 77528,
+    "chomage": 5
+  },
+  {
+    "code": 77529,
+    "chomage": 8.4
+  },
+  {
+    "code": 77530,
+    "chomage": 11.2
+  },
+  {
+    "code": 77531,
+    "chomage": 11.4
+  },
+  {
+    "code": 77532,
+    "chomage": 2.3
+  },
+  {
+    "code": 77533,
+    "chomage": 8.9
+  },
+  {
+    "code": 77534,
+    "chomage": 6.2
+  },
+  {
+    "code": 78003,
+    "chomage": 7
+  },
+  {
+    "code": 78005,
+    "chomage": 12.8
+  },
+  {
+    "code": 78006,
+    "chomage": 7.7
+  },
+  {
+    "code": 78007,
+    "chomage": 7.4
+  },
+  {
+    "code": 78009,
+    "chomage": 10.7
+  },
+  {
+    "code": 78010,
+    "chomage": 7.5
+  },
+  {
+    "code": 78013,
+    "chomage": 6.2
+  },
+  {
+    "code": 78015,
+    "chomage": 7.2
+  },
+  {
+    "code": 78020,
+    "chomage": 6.8
+  },
+  {
+    "code": 78029,
+    "chomage": 13.4
+  },
+  {
+    "code": 78030,
+    "chomage": 4.8
+  },
+  {
+    "code": 78031,
+    "chomage": 7.4
+  },
+  {
+    "code": 78033,
+    "chomage": 10.6
+  },
+  {
+    "code": 78034,
+    "chomage": 3.3
+  },
+  {
+    "code": 78036,
+    "chomage": 7
+  },
+  {
+    "code": 78043,
+    "chomage": 6.8
+  },
+  {
+    "code": 78048,
+    "chomage": 4.4
+  },
+  {
+    "code": 78049,
+    "chomage": 6.6
+  },
+  {
+    "code": 78050,
+    "chomage": 4.5
+  },
+  {
+    "code": 78053,
+    "chomage": 5.3
+  },
+  {
+    "code": 78057,
+    "chomage": 8.7
+  },
+  {
+    "code": 78062,
+    "chomage": 6.5
+  },
+  {
+    "code": 78068,
+    "chomage": 10.6
+  },
+  {
+    "code": 78070,
+    "chomage": 3.3
+  },
+  {
+    "code": 78071,
+    "chomage": 6.7
+  },
+  {
+    "code": 78072,
+    "chomage": 7
+  },
+  {
+    "code": 78073,
+    "chomage": 6.4
+  },
+  {
+    "code": 78076,
+    "chomage": 8.9
+  },
+  {
+    "code": 78077,
+    "chomage": 9
+  },
+  {
+    "code": 78082,
+    "chomage": 11.6
+  },
+  {
+    "code": 78084,
+    "chomage": 5.3
+  },
+  {
+    "code": 78087,
+    "chomage": 7.5
+  },
+  {
+    "code": 78089,
+    "chomage": 14.9
+  },
+  {
+    "code": 78090,
+    "chomage": 10.7
+  },
+  {
+    "code": 78092,
+    "chomage": 7.9
+  },
+  {
+    "code": 78096,
+    "chomage": 8.1
+  },
+  {
+    "code": 78104,
+    "chomage": 8.4
+  },
+  {
+    "code": 78107,
+    "chomage": 8.4
+  },
+  {
+    "code": 78108,
+    "chomage": 8
+  },
+  {
+    "code": 78113,
+    "chomage": 8.4
+  },
+  {
+    "code": 78117,
+    "chomage": 7
+  },
+  {
+    "code": 78118,
+    "chomage": 12.8
+  },
+  {
+    "code": 78120,
+    "chomage": 4.1
+  },
+  {
+    "code": 78123,
+    "chomage": 13.5
+  },
+  {
+    "code": 78124,
+    "chomage": 9.8
+  },
+  {
+    "code": 78125,
+    "chomage": 7.4
+  },
+  {
+    "code": 78126,
+    "chomage": 10.8
+  },
+  {
+    "code": 78128,
+    "chomage": 6.2
+  },
+  {
+    "code": 78133,
+    "chomage": 10.6
+  },
+  {
+    "code": 78138,
+    "chomage": 19.6
+  },
+  {
+    "code": 78140,
+    "chomage": 6.8
+  },
+  {
+    "code": 78143,
+    "chomage": 6.4
+  },
+  {
+    "code": 78146,
+    "chomage": 8.1
+  },
+  {
+    "code": 78147,
+    "chomage": 8.8
+  },
+  {
+    "code": 78152,
+    "chomage": 7.5
+  },
+  {
+    "code": 78158,
+    "chomage": 8
+  },
+  {
+    "code": 78160,
+    "chomage": 6.5
+  },
+  {
+    "code": 78162,
+    "chomage": 12
+  },
+  {
+    "code": 78163,
+    "chomage": 8.5
+  },
+  {
+    "code": 78164,
+    "chomage": 9.4
+  },
+  {
+    "code": 78165,
+    "chomage": 9.5
+  },
+  {
+    "code": 78168,
+    "chomage": 11.9
+  },
+  {
+    "code": 78171,
+    "chomage": 8.5
+  },
+  {
+    "code": 78172,
+    "chomage": 8.9
+  },
+  {
+    "code": 78185,
+    "chomage": 5.1
+  },
+  {
+    "code": 78188,
+    "chomage": 10.1
+  },
+  {
+    "code": 78189,
+    "chomage": 7
+  },
+  {
+    "code": 78190,
+    "chomage": 6.9
+  },
+  {
+    "code": 78192,
+    "chomage": 7.6
+  },
+  {
+    "code": 78193,
+    "chomage": 8.1
+  },
+  {
+    "code": 78194,
+    "chomage": 9.9
+  },
+  {
+    "code": 78196,
+    "chomage": 10.1
+  },
+  {
+    "code": 78202,
+    "chomage": 7.6
+  },
+  {
+    "code": 78206,
+    "chomage": 9.6
+  },
+  {
+    "code": 78208,
+    "chomage": 10.3
+  },
+  {
+    "code": 78209,
+    "chomage": 8.5
+  },
+  {
+    "code": 78217,
+    "chomage": 10.7
+  },
+  {
+    "code": 78220,
+    "chomage": 8.3
+  },
+  {
+    "code": 78224,
+    "chomage": 6.3
+  },
+  {
+    "code": 78227,
+    "chomage": 9.6
+  },
+  {
+    "code": 78230,
+    "chomage": 8.3
+  },
+  {
+    "code": 78231,
+    "chomage": 9.1
+  },
+  {
+    "code": 78233,
+    "chomage": 9.1
+  },
+  {
+    "code": 78234,
+    "chomage": 6.9
+  },
+  {
+    "code": 78236,
+    "chomage": 8.3
+  },
+  {
+    "code": 78237,
+    "chomage": 9.3
+  },
+  {
+    "code": 78238,
+    "chomage": 7.9
+  },
+  {
+    "code": 78239,
+    "chomage": 8.4
+  },
+  {
+    "code": 78242,
+    "chomage": 10.9
+  },
+  {
+    "code": 78245,
+    "chomage": 6.2
+  },
+  {
+    "code": 78246,
+    "chomage": 8.3
+  },
+  {
+    "code": 78251,
+    "chomage": 9.3
+  },
+  {
+    "code": 78255,
+    "chomage": 13.1
+  },
+  {
+    "code": 78261,
+    "chomage": 8.7
+  },
+  {
+    "code": 78262,
+    "chomage": 4.6
+  },
+  {
+    "code": 78263,
+    "chomage": 7.3
+  },
+  {
+    "code": 78264,
+    "chomage": 4.2
+  },
+  {
+    "code": 78265,
+    "chomage": 6
+  },
+  {
+    "code": 78267,
+    "chomage": 10
+  },
+  {
+    "code": 78269,
+    "chomage": 7.4
+  },
+  {
+    "code": 78276,
+    "chomage": 10.9
+  },
+  {
+    "code": 78278,
+    "chomage": 7.5
+  },
+  {
+    "code": 78281,
+    "chomage": 6.6
+  },
+  {
+    "code": 78283,
+    "chomage": 8
+  },
+  {
+    "code": 78285,
+    "chomage": 5.1
+  },
+  {
+    "code": 78289,
+    "chomage": 7.8
+  },
+  {
+    "code": 78290,
+    "chomage": 9
+  },
+  {
+    "code": 78291,
+    "chomage": 5.7
+  },
+  {
+    "code": 78296,
+    "chomage": 7.9
+  },
+  {
+    "code": 78297,
+    "chomage": 9.9
+  },
+  {
+    "code": 78299,
+    "chomage": 8.9
+  },
+  {
+    "code": 78300,
+    "chomage": 5.9
+  },
+  {
+    "code": 78302,
+    "chomage": 5.1
+  },
+  {
+    "code": 78305,
+    "chomage": 9.3
+  },
+  {
+    "code": 78307,
+    "chomage": 4.8
+  },
+  {
+    "code": 78310,
+    "chomage": 11.5
+  },
+  {
+    "code": 78311,
+    "chomage": 9.2
+  },
+  {
+    "code": 78314,
+    "chomage": 9
+  },
+  {
+    "code": 78317,
+    "chomage": 7
+  },
+  {
+    "code": 78320,
+    "chomage": 13.8
+  },
+  {
+    "code": 78321,
+    "chomage": 7
+  },
+  {
+    "code": 78322,
+    "chomage": 9.3
+  },
+  {
+    "code": 78324,
+    "chomage": 11.6
+  },
+  {
+    "code": 78325,
+    "chomage": 5.5
+  },
+  {
+    "code": 78327,
+    "chomage": 10.7
+  },
+  {
+    "code": 78329,
+    "chomage": 6.7
+  },
+  {
+    "code": 78334,
+    "chomage": 6.1
+  },
+  {
+    "code": 78335,
+    "chomage": 17.3
+  },
+  {
+    "code": 78337,
+    "chomage": 7
+  },
+  {
+    "code": 78343,
+    "chomage": 6.3
+  },
+  {
+    "code": 78344,
+    "chomage": 7.2
+  },
+  {
+    "code": 78346,
+    "chomage": 8.1
+  },
+  {
+    "code": 78349,
+    "chomage": 6.5
+  },
+  {
+    "code": 78350,
+    "chomage": 9.2
+  },
+  {
+    "code": 78354,
+    "chomage": 10.8
+  },
+  {
+    "code": 78356,
+    "chomage": 9.4
+  },
+  {
+    "code": 78358,
+    "chomage": 7.5
+  },
+  {
+    "code": 78361,
+    "chomage": 22.3
+  },
+  {
+    "code": 78362,
+    "chomage": 17.2
+  },
+  {
+    "code": 78364,
+    "chomage": 5.4
+  },
+  {
+    "code": 78366,
+    "chomage": 6
+  },
+  {
+    "code": 78367,
+    "chomage": 6.1
+  },
+  {
+    "code": 78368,
+    "chomage": 6.8
+  },
+  {
+    "code": 78372,
+    "chomage": 8.2
+  },
+  {
+    "code": 78380,
+    "chomage": 10.1
+  },
+  {
+    "code": 78381,
+    "chomage": 5.9
+  },
+  {
+    "code": 78382,
+    "chomage": 8.7
+  },
+  {
+    "code": 78383,
+    "chomage": 8.8
+  },
+  {
+    "code": 78384,
+    "chomage": 7.4
+  },
+  {
+    "code": 78385,
+    "chomage": 8.3
+  },
+  {
+    "code": 78389,
+    "chomage": 7.8
+  },
+  {
+    "code": 78391,
+    "chomage": 10.6
+  },
+  {
+    "code": 78396,
+    "chomage": 9
+  },
+  {
+    "code": 78397,
+    "chomage": 6.6
+  },
+  {
+    "code": 78398,
+    "chomage": 8.8
+  },
+  {
+    "code": 78401,
+    "chomage": 12.9
+  },
+  {
+    "code": 78402,
+    "chomage": 8.6
+  },
+  {
+    "code": 78403,
+    "chomage": 9.7
+  },
+  {
+    "code": 78404,
+    "chomage": 9.8
+  },
+  {
+    "code": 78406,
+    "chomage": 5.8
+  },
+  {
+    "code": 78407,
+    "chomage": 6.2
+  },
+  {
+    "code": 78410,
+    "chomage": 11
+  },
+  {
+    "code": 78413,
+    "chomage": 7.9
+  },
+  {
+    "code": 78415,
+    "chomage": 7.5
+  },
+  {
+    "code": 78416,
+    "chomage": 5.6
+  },
+  {
+    "code": 78417,
+    "chomage": 9.2
+  },
+  {
+    "code": 78418,
+    "chomage": 8.7
+  },
+  {
+    "code": 78420,
+    "chomage": 7.6
+  },
+  {
+    "code": 78423,
+    "chomage": 7.9
+  },
+  {
+    "code": 78431,
+    "chomage": 6.9
+  },
+  {
+    "code": 78437,
+    "chomage": 8
+  },
+  {
+    "code": 78439,
+    "chomage": 5
+  },
+  {
+    "code": 78440,
+    "chomage": 20.4
+  },
+  {
+    "code": 78442,
+    "chomage": 7
+  },
+  {
+    "code": 78443,
+    "chomage": 6.2
+  },
+  {
+    "code": 78444,
+    "chomage": 8.7
+  },
+  {
+    "code": 78451,
+    "chomage": 6.4
+  },
+  {
+    "code": 78455,
+    "chomage": 8.2
+  },
+  {
+    "code": 78460,
+    "chomage": 8.7
+  },
+  {
+    "code": 78464,
+    "chomage": 8
+  },
+  {
+    "code": 78465,
+    "chomage": 6.2
+  },
+  {
+    "code": 78466,
+    "chomage": 8.8
+  },
+  {
+    "code": 78470,
+    "chomage": 10.2
+  },
+  {
+    "code": 78472,
+    "chomage": 5.2
+  },
+  {
+    "code": 78474,
+    "chomage": 8.2
+  },
+  {
+    "code": 78475,
+    "chomage": 5
+  },
+  {
+    "code": 78478,
+    "chomage": 5.8
+  },
+  {
+    "code": 78481,
+    "chomage": 8.1
+  },
+  {
+    "code": 78484,
+    "chomage": 6.4
+  },
+  {
+    "code": 78486,
+    "chomage": 7.6
+  },
+  {
+    "code": 78490,
+    "chomage": 10.8
+  },
+  {
+    "code": 78497,
+    "chomage": 6.2
+  },
+  {
+    "code": 78498,
+    "chomage": 12.1
+  },
+  {
+    "code": 78499,
+    "chomage": 5.5
+  },
+  {
+    "code": 78501,
+    "chomage": 10.7
+  },
+  {
+    "code": 78502,
+    "chomage": 9.7
+  },
+  {
+    "code": 78503,
+    "chomage": 3.5
+  },
+  {
+    "code": 78505,
+    "chomage": 2.4
+  },
+  {
+    "code": 78506,
+    "chomage": 7.9
+  },
+  {
+    "code": 78513,
+    "chomage": 7.9
+  },
+  {
+    "code": 78516,
+    "chomage": 6.9
+  },
+  {
+    "code": 78517,
+    "chomage": 9.4
+  },
+  {
+    "code": 78518,
+    "chomage": 8
+  },
+  {
+    "code": 78520,
+    "chomage": 9.1
+  },
+  {
+    "code": 78522,
+    "chomage": 6.3
+  },
+  {
+    "code": 78524,
+    "chomage": 8.9
+  },
+  {
+    "code": 78528,
+    "chomage": 13.8
+  },
+  {
+    "code": 78530,
+    "chomage": 9.5
+  },
+  {
+    "code": 78531,
+    "chomage": 12.6
+  },
+  {
+    "code": 78536,
+    "chomage": 5.9
+  },
+  {
+    "code": 78537,
+    "chomage": 8.4
+  },
+  {
+    "code": 78545,
+    "chomage": 10
+  },
+  {
+    "code": 78548,
+    "chomage": 4.7
+  },
+  {
+    "code": 78550,
+    "chomage": 5.6
+  },
+  {
+    "code": 78551,
+    "chomage": 9.6
+  },
+  {
+    "code": 78557,
+    "chomage": 7.8
+  },
+  {
+    "code": 78558,
+    "chomage": 8.9
+  },
+  {
+    "code": 78559,
+    "chomage": 7.5
+  },
+  {
+    "code": 78561,
+    "chomage": 4
+  },
+  {
+    "code": 78562,
+    "chomage": 6.9
+  },
+  {
+    "code": 78564,
+    "chomage": 7.2
+  },
+  {
+    "code": 78565,
+    "chomage": 11.8
+  },
+  {
+    "code": 78567,
+    "chomage": 8.4
+  },
+  {
+    "code": 78569,
+    "chomage": 10
+  },
+  {
+    "code": 78571,
+    "chomage": 7.2
+  },
+  {
+    "code": 78575,
+    "chomage": 6.7
+  },
+  {
+    "code": 78576,
+    "chomage": 7.5
+  },
+  {
+    "code": 78586,
+    "chomage": 12.6
+  },
+  {
+    "code": 78588,
+    "chomage": 7.6
+  },
+  {
+    "code": 78590,
+    "chomage": 12.3
+  },
+  {
+    "code": 78591,
+    "chomage": 9.5
+  },
+  {
+    "code": 78597,
+    "chomage": 9.1
+  },
+  {
+    "code": 78601,
+    "chomage": 7.3
+  },
+  {
+    "code": 78605,
+    "chomage": 7
+  },
+  {
+    "code": 78606,
+    "chomage": 0
+  },
+  {
+    "code": 78608,
+    "chomage": 14.1
+  },
+  {
+    "code": 78609,
+    "chomage": 6.2
+  },
+  {
+    "code": 78615,
+    "chomage": 8.6
+  },
+  {
+    "code": 78616,
+    "chomage": 7.2
+  },
+  {
+    "code": 78618,
+    "chomage": 6.9
+  },
+  {
+    "code": 78620,
+    "chomage": 6.7
+  },
+  {
+    "code": 78621,
+    "chomage": 19.4
+  },
+  {
+    "code": 78623,
+    "chomage": 6.4
+  },
+  {
+    "code": 78624,
+    "chomage": 10.1
+  },
+  {
+    "code": 78638,
+    "chomage": 10.4
+  },
+  {
+    "code": 78640,
+    "chomage": 6.9
+  },
+  {
+    "code": 78642,
+    "chomage": 7.9
+  },
+  {
+    "code": 78643,
+    "chomage": 12.9
+  },
+  {
+    "code": 78644,
+    "chomage": 15.4
+  },
+  {
+    "code": 78646,
+    "chomage": 8.2
+  },
+  {
+    "code": 78647,
+    "chomage": 6.6
+  },
+  {
+    "code": 78650,
+    "chomage": 7.9
+  },
+  {
+    "code": 78653,
+    "chomage": 12.8
+  },
+  {
+    "code": 78655,
+    "chomage": 9.3
+  },
+  {
+    "code": 78668,
+    "chomage": 11.5
+  },
+  {
+    "code": 78672,
+    "chomage": 8.5
+  },
+  {
+    "code": 78674,
+    "chomage": 6.7
+  },
+  {
+    "code": 78677,
+    "chomage": 9.9
+  },
+  {
+    "code": 78681,
+    "chomage": 6.6
+  },
+  {
+    "code": 78683,
+    "chomage": 6.1
+  },
+  {
+    "code": 78686,
+    "chomage": 6.4
+  },
+  {
+    "code": 78688,
+    "chomage": 6.8
+  },
+  {
+    "code": 91001,
+    "chomage": 10.3
+  },
+  {
+    "code": 91016,
+    "chomage": 12.2
+  },
+  {
+    "code": 91017,
+    "chomage": 6.5
+  },
+  {
+    "code": 91021,
+    "chomage": 11.3
+  },
+  {
+    "code": 91022,
+    "chomage": 10
+  },
+  {
+    "code": 91027,
+    "chomage": 9.2
+  },
+  {
+    "code": 91035,
+    "chomage": 9.5
+  },
+  {
+    "code": 91037,
+    "chomage": 6.3
+  },
+  {
+    "code": 91038,
+    "chomage": 9.3
+  },
+  {
+    "code": 91041,
+    "chomage": 5.9
+  },
+  {
+    "code": 91044,
+    "chomage": 7.9
+  },
+  {
+    "code": 91045,
+    "chomage": 9.5
+  },
+  {
+    "code": 91047,
+    "chomage": 6.9
+  },
+  {
+    "code": 91064,
+    "chomage": 8.3
+  },
+  {
+    "code": 91067,
+    "chomage": 10.6
+  },
+  {
+    "code": 91069,
+    "chomage": 8
+  },
+  {
+    "code": 91075,
+    "chomage": 2.7
+  },
+  {
+    "code": 91079,
+    "chomage": 6.4
+  },
+  {
+    "code": 91080,
+    "chomage": 5.8
+  },
+  {
+    "code": 91081,
+    "chomage": 6.5
+  },
+  {
+    "code": 91085,
+    "chomage": 6
+  },
+  {
+    "code": 91086,
+    "chomage": 8.5
+  },
+  {
+    "code": 91093,
+    "chomage": 4.4
+  },
+  {
+    "code": 91095,
+    "chomage": 6.1
+  },
+  {
+    "code": 91097,
+    "chomage": 9.8
+  },
+  {
+    "code": 91098,
+    "chomage": 5.6
+  },
+  {
+    "code": 91099,
+    "chomage": 6.8
+  },
+  {
+    "code": 91100,
+    "chomage": 5.9
+  },
+  {
+    "code": 91103,
+    "chomage": 12.9
+  },
+  {
+    "code": 91105,
+    "chomage": 8.4
+  },
+  {
+    "code": 91106,
+    "chomage": 8
+  },
+  {
+    "code": 91109,
+    "chomage": 5.1
+  },
+  {
+    "code": 91111,
+    "chomage": 6.6
+  },
+  {
+    "code": 91112,
+    "chomage": 3.6
+  },
+  {
+    "code": 91114,
+    "chomage": 9.9
+  },
+  {
+    "code": 91115,
+    "chomage": 7.6
+  },
+  {
+    "code": 91121,
+    "chomage": 14.2
+  },
+  {
+    "code": 91122,
+    "chomage": 8
+  },
+  {
+    "code": 91129,
+    "chomage": 5.9
+  },
+  {
+    "code": 91130,
+    "chomage": 6.7
+  },
+  {
+    "code": 91131,
+    "chomage": 9.6
+  },
+  {
+    "code": 91132,
+    "chomage": 7.8
+  },
+  {
+    "code": 91135,
+    "chomage": 7.3
+  },
+  {
+    "code": 91136,
+    "chomage": 8.2
+  },
+  {
+    "code": 91137,
+    "chomage": 4.2
+  },
+  {
+    "code": 91145,
+    "chomage": 21.2
+  },
+  {
+    "code": 91148,
+    "chomage": 8.3
+  },
+  {
+    "code": 91156,
+    "chomage": 3.8
+  },
+  {
+    "code": 91159,
+    "chomage": 5
+  },
+  {
+    "code": 91161,
+    "chomage": 10.6
+  },
+  {
+    "code": 91174,
+    "chomage": 14.8
+  },
+  {
+    "code": 91175,
+    "chomage": 7
+  },
+  {
+    "code": 91179,
+    "chomage": 9.6
+  },
+  {
+    "code": 91180,
+    "chomage": 4.2
+  },
+  {
+    "code": 91182,
+    "chomage": 16.9
+  },
+  {
+    "code": 91184,
+    "chomage": 11.4
+  },
+  {
+    "code": 91186,
+    "chomage": 5.8
+  },
+  {
+    "code": 91191,
+    "chomage": 9.8
+  },
+  {
+    "code": 91195,
+    "chomage": 10
+  },
+  {
+    "code": 91198,
+    "chomage": 7
+  },
+  {
+    "code": 91200,
+    "chomage": 12.3
+  },
+  {
+    "code": 91201,
+    "chomage": 10.9
+  },
+  {
+    "code": 91204,
+    "chomage": 9.5
+  },
+  {
+    "code": 91207,
+    "chomage": 13.2
+  },
+  {
+    "code": 91215,
+    "chomage": 17.4
+  },
+  {
+    "code": 91216,
+    "chomage": 9.5
+  },
+  {
+    "code": 91222,
+    "chomage": 8.5
+  },
+  {
+    "code": 91223,
+    "chomage": 15.9
+  },
+  {
+    "code": 91225,
+    "chomage": 6.5
+  },
+  {
+    "code": 91226,
+    "chomage": 8
+  },
+  {
+    "code": 91228,
+    "chomage": 17.9
+  },
+  {
+    "code": 91232,
+    "chomage": 10
+  },
+  {
+    "code": 91235,
+    "chomage": 11.8
+  },
+  {
+    "code": 91240,
+    "chomage": 9.1
+  },
+  {
+    "code": 91243,
+    "chomage": 7.3
+  },
+  {
+    "code": 91244,
+    "chomage": 8.4
+  },
+  {
+    "code": 91247,
+    "chomage": 3.7
+  },
+  {
+    "code": 91248,
+    "chomage": 5
+  },
+  {
+    "code": 91249,
+    "chomage": 7
+  },
+  {
+    "code": 91272,
+    "chomage": 7.4
+  },
+  {
+    "code": 91273,
+    "chomage": 6
+  },
+  {
+    "code": 91274,
+    "chomage": 6.8
+  },
+  {
+    "code": 91275,
+    "chomage": 6.9
+  },
+  {
+    "code": 91284,
+    "chomage": 6.5
+  },
+  {
+    "code": 91286,
+    "chomage": 23.6
+  },
+  {
+    "code": 91292,
+    "chomage": 6.6
+  },
+  {
+    "code": 91293,
+    "chomage": 11.7
+  },
+  {
+    "code": 91294,
+    "chomage": 9.9
+  },
+  {
+    "code": 91312,
+    "chomage": 6.6
+  },
+  {
+    "code": 91315,
+    "chomage": 7.2
+  },
+  {
+    "code": 91318,
+    "chomage": 8.4
+  },
+  {
+    "code": 91319,
+    "chomage": 6.5
+  },
+  {
+    "code": 91326,
+    "chomage": 10.7
+  },
+  {
+    "code": 91330,
+    "chomage": 6.4
+  },
+  {
+    "code": 91332,
+    "chomage": 5.2
+  },
+  {
+    "code": 91333,
+    "chomage": 9.3
+  },
+  {
+    "code": 91338,
+    "chomage": 6.9
+  },
+  {
+    "code": 91339,
+    "chomage": 8.8
+  },
+  {
+    "code": 91340,
+    "chomage": 9
+  },
+  {
+    "code": 91345,
+    "chomage": 11.5
+  },
+  {
+    "code": 91347,
+    "chomage": 7.7
+  },
+  {
+    "code": 91359,
+    "chomage": 8.9
+  },
+  {
+    "code": 91363,
+    "chomage": 8.5
+  },
+  {
+    "code": 91374,
+    "chomage": 4.2
+  },
+  {
+    "code": 91376,
+    "chomage": 8
+  },
+  {
+    "code": 91377,
+    "chomage": 10.9
+  },
+  {
+    "code": 91378,
+    "chomage": 6.4
+  },
+  {
+    "code": 91386,
+    "chomage": 8.6
+  },
+  {
+    "code": 91390,
+    "chomage": 11.9
+  },
+  {
+    "code": 91393,
+    "chomage": 9.2
+  },
+  {
+    "code": 91399,
+    "chomage": 18.6
+  },
+  {
+    "code": 91405,
+    "chomage": 8
+  },
+  {
+    "code": 91408,
+    "chomage": 8.4
+  },
+  {
+    "code": 91411,
+    "chomage": 5.4
+  },
+  {
+    "code": 91412,
+    "chomage": 9.6
+  },
+  {
+    "code": 91414,
+    "chomage": 9.7
+  },
+  {
+    "code": 91421,
+    "chomage": 10.4
+  },
+  {
+    "code": 91425,
+    "chomage": 9.2
+  },
+  {
+    "code": 91432,
+    "chomage": 9.6
+  },
+  {
+    "code": 91433,
+    "chomage": 6.9
+  },
+  {
+    "code": 91434,
+    "chomage": 12
+  },
+  {
+    "code": 91435,
+    "chomage": 7.4
+  },
+  {
+    "code": 91441,
+    "chomage": 7.1
+  },
+  {
+    "code": 91457,
+    "chomage": 8.2
+  },
+  {
+    "code": 91458,
+    "chomage": 6.6
+  },
+  {
+    "code": 91461,
+    "chomage": 6.6
+  },
+  {
+    "code": 91463,
+    "chomage": 7.2
+  },
+  {
+    "code": 91468,
+    "chomage": 7.9
+  },
+  {
+    "code": 91469,
+    "chomage": 7.5
+  },
+  {
+    "code": 91471,
+    "chomage": 8.1
+  },
+  {
+    "code": 91473,
+    "chomage": 10
+  },
+  {
+    "code": 91477,
+    "chomage": 7.7
+  },
+  {
+    "code": 91479,
+    "chomage": 8.8
+  },
+  {
+    "code": 91482,
+    "chomage": 3.5
+  },
+  {
+    "code": 91494,
+    "chomage": 7.2
+  },
+  {
+    "code": 91495,
+    "chomage": 10.8
+  },
+  {
+    "code": 91507,
+    "chomage": 8.4
+  },
+  {
+    "code": 91508,
+    "chomage": 6.7
+  },
+  {
+    "code": 91511,
+    "chomage": 8.2
+  },
+  {
+    "code": 91514,
+    "chomage": 13.1
+  },
+  {
+    "code": 91519,
+    "chomage": 8.3
+  },
+  {
+    "code": 91521,
+    "chomage": 15.8
+  },
+  {
+    "code": 91525,
+    "chomage": 7.3
+  },
+  {
+    "code": 91526,
+    "chomage": 3.8
+  },
+  {
+    "code": 91533,
+    "chomage": 10.3
+  },
+  {
+    "code": 91534,
+    "chomage": 5.1
+  },
+  {
+    "code": 91538,
+    "chomage": 6.6
+  },
+  {
+    "code": 91540,
+    "chomage": 7.9
+  },
+  {
+    "code": 91544,
+    "chomage": 9.1
+  },
+  {
+    "code": 91546,
+    "chomage": 5.9
+  },
+  {
+    "code": 91547,
+    "chomage": 10.7
+  },
+  {
+    "code": 91549,
+    "chomage": 12.8
+  },
+  {
+    "code": 91552,
+    "chomage": 11.5
+  },
+  {
+    "code": 91553,
+    "chomage": 7.4
+  },
+  {
+    "code": 91556,
+    "chomage": 7
+  },
+  {
+    "code": 91560,
+    "chomage": 4.6
+  },
+  {
+    "code": 91568,
+    "chomage": 5
+  },
+  {
+    "code": 91570,
+    "chomage": 12.8
+  },
+  {
+    "code": 91573,
+    "chomage": 9.6
+  },
+  {
+    "code": 91577,
+    "chomage": 9.9
+  },
+  {
+    "code": 91578,
+    "chomage": 8.3
+  },
+  {
+    "code": 91579,
+    "chomage": 6
+  },
+  {
+    "code": 91581,
+    "chomage": 8.7
+  },
+  {
+    "code": 91587,
+    "chomage": 8.8
+  },
+  {
+    "code": 91589,
+    "chomage": 11.3
+  },
+  {
+    "code": 91593,
+    "chomage": 7
+  },
+  {
+    "code": 91599,
+    "chomage": 7.6
+  },
+  {
+    "code": 91600,
+    "chomage": 7
+  },
+  {
+    "code": 91602,
+    "chomage": 12.4
+  },
+  {
+    "code": 91613,
+    "chomage": 5.7
+  },
+  {
+    "code": 91617,
+    "chomage": 8.1
+  },
+  {
+    "code": 91619,
+    "chomage": 7.1
+  },
+  {
+    "code": 91629,
+    "chomage": 7.7
+  },
+  {
+    "code": 91630,
+    "chomage": 6.1
+  },
+  {
+    "code": 91631,
+    "chomage": 6.5
+  },
+  {
+    "code": 91634,
+    "chomage": 5.4
+  },
+  {
+    "code": 91635,
+    "chomage": 5.9
+  },
+  {
+    "code": 91639,
+    "chomage": 7.5
+  },
+  {
+    "code": 91645,
+    "chomage": 7.7
+  },
+  {
+    "code": 91648,
+    "chomage": 6.4
+  },
+  {
+    "code": 91649,
+    "chomage": 8.4
+  },
+  {
+    "code": 91654,
+    "chomage": 7.6
+  },
+  {
+    "code": 91657,
+    "chomage": 15.1
+  },
+  {
+    "code": 91659,
+    "chomage": 10.4
+  },
+  {
+    "code": 91661,
+    "chomage": 6.7
+  },
+  {
+    "code": 91662,
+    "chomage": 8.1
+  },
+  {
+    "code": 91665,
+    "chomage": 9.4
+  },
+  {
+    "code": 91666,
+    "chomage": 7.5
+  },
+  {
+    "code": 91667,
+    "chomage": 7.4
+  },
+  {
+    "code": 91671,
+    "chomage": 5.9
+  },
+  {
+    "code": 91679,
+    "chomage": 7.3
+  },
+  {
+    "code": 91685,
+    "chomage": 9.3
+  },
+  {
+    "code": 91687,
+    "chomage": 13.5
+  },
+  {
+    "code": 91689,
+    "chomage": 7.9
+  },
+  {
+    "code": 91691,
+    "chomage": 8.5
+  },
+  {
+    "code": 91692,
+    "chomage": 15.9
+  },
+  {
+    "code": 92002,
+    "chomage": 9.4
+  },
+  {
+    "code": 92004,
+    "chomage": 11.4
+  },
+  {
+    "code": 92007,
+    "chomage": 16.5
+  },
+  {
+    "code": 92009,
+    "chomage": 10.3
+  },
+  {
+    "code": 92012,
+    "chomage": 9.6
+  },
+  {
+    "code": 92014,
+    "chomage": 9.8
+  },
+  {
+    "code": 92019,
+    "chomage": 11.6
+  },
+  {
+    "code": 92020,
+    "chomage": 9.1
+  },
+  {
+    "code": 92022,
+    "chomage": 7.4
+  },
+  {
+    "code": 92023,
+    "chomage": 10.5
+  },
+  {
+    "code": 92024,
+    "chomage": 14.4
+  },
+  {
+    "code": 92025,
+    "chomage": 14.5
+  },
+  {
+    "code": 92026,
+    "chomage": 9.1
+  },
+  {
+    "code": 92032,
+    "chomage": 10.5
+  },
+  {
+    "code": 92033,
+    "chomage": 9.1
+  },
+  {
+    "code": 92035,
+    "chomage": 8.9
+  },
+  {
+    "code": 92036,
+    "chomage": 21.1
+  },
+  {
+    "code": 92040,
+    "chomage": 8.3
+  },
+  {
+    "code": 92044,
+    "chomage": 10.3
+  },
+  {
+    "code": 92046,
+    "chomage": 12.3
+  },
+  {
+    "code": 92047,
+    "chomage": 8.5
+  },
+  {
+    "code": 92048,
+    "chomage": 9.4
+  },
+  {
+    "code": 92049,
+    "chomage": 10.1
+  },
+  {
+    "code": 92050,
+    "chomage": 15.7
+  },
+  {
+    "code": 92051,
+    "chomage": 8.8
+  },
+  {
+    "code": 92060,
+    "chomage": 8.1
+  },
+  {
+    "code": 92062,
+    "chomage": 10.5
+  },
+  {
+    "code": 92063,
+    "chomage": 9.1
+  },
+  {
+    "code": 92064,
+    "chomage": 7.8
+  },
+  {
+    "code": 92071,
+    "chomage": 9.4
+  },
+  {
+    "code": 92072,
+    "chomage": 10.3
+  },
+  {
+    "code": 92073,
+    "chomage": 10.3
+  },
+  {
+    "code": 92075,
+    "chomage": 9.2
+  },
+  {
+    "code": 92076,
+    "chomage": 8.2
+  },
+  {
+    "code": 92077,
+    "chomage": 8.4
+  },
+  {
+    "code": 92078,
+    "chomage": 19.2
+  },
+  {
+    "code": 93001,
+    "chomage": 23.8
+  },
+  {
+    "code": 93005,
+    "chomage": 19.7
+  },
+  {
+    "code": 93006,
+    "chomage": 18.5
+  },
+  {
+    "code": 93007,
+    "chomage": 21.7
+  },
+  {
+    "code": 93008,
+    "chomage": 23.5
+  },
+  {
+    "code": 93010,
+    "chomage": 21.5
+  },
+  {
+    "code": 93013,
+    "chomage": 18.1
+  },
+  {
+    "code": 93014,
+    "chomage": 25
+  },
+  {
+    "code": 93015,
+    "chomage": 8.9
+  },
+  {
+    "code": 93027,
+    "chomage": 27
+  },
+  {
+    "code": 93029,
+    "chomage": 19.9
+  },
+  {
+    "code": 93030,
+    "chomage": 19.3
+  },
+  {
+    "code": 93031,
+    "chomage": 17.6
+  },
+  {
+    "code": 93032,
+    "chomage": 13.3
+  },
+  {
+    "code": 93033,
+    "chomage": 8.1
+  },
+  {
+    "code": 93039,
+    "chomage": 22.8
+  },
+  {
+    "code": 93045,
+    "chomage": 14.1
+  },
+  {
+    "code": 93046,
+    "chomage": 12.7
+  },
+  {
+    "code": 93047,
+    "chomage": 16.7
+  },
+  {
+    "code": 93048,
+    "chomage": 17.9
+  },
+  {
+    "code": 93049,
+    "chomage": 11.2
+  },
+  {
+    "code": 93050,
+    "chomage": 14.4
+  },
+  {
+    "code": 93051,
+    "chomage": 13.9
+  },
+  {
+    "code": 93053,
+    "chomage": 21.4
+  },
+  {
+    "code": 93055,
+    "chomage": 19.1
+  },
+  {
+    "code": 93057,
+    "chomage": 12.2
+  },
+  {
+    "code": 93059,
+    "chomage": 22.3
+  },
+  {
+    "code": 93061,
+    "chomage": 17.4
+  },
+  {
+    "code": 93062,
+    "chomage": 11.2
+  },
+  {
+    "code": 93063,
+    "chomage": 19.5
+  },
+  {
+    "code": 93064,
+    "chomage": 14.3
+  },
+  {
+    "code": 93066,
+    "chomage": 23.8
+  },
+  {
+    "code": 93070,
+    "chomage": 19
+  },
+  {
+    "code": 93071,
+    "chomage": 19.6
+  },
+  {
+    "code": 93072,
+    "chomage": 22.2
+  },
+  {
+    "code": 93073,
+    "chomage": 14.9
+  },
+  {
+    "code": 93074,
+    "chomage": 10.8
+  },
+  {
+    "code": 93077,
+    "chomage": 11.9
+  },
+  {
+    "code": 93078,
+    "chomage": 19.6
+  },
+  {
+    "code": 93079,
+    "chomage": 25.5
+  },
+  {
+    "code": 94001,
+    "chomage": 11.5
+  },
+  {
+    "code": 94002,
+    "chomage": 15.8
+  },
+  {
+    "code": 94003,
+    "chomage": 13.8
+  },
+  {
+    "code": 94004,
+    "chomage": 15.4
+  },
+  {
+    "code": 94011,
+    "chomage": 15.8
+  },
+  {
+    "code": 94015,
+    "chomage": 8
+  },
+  {
+    "code": 94016,
+    "chomage": 12.6
+  },
+  {
+    "code": 94017,
+    "chomage": 14.9
+  },
+  {
+    "code": 94018,
+    "chomage": 10.1
+  },
+  {
+    "code": 94019,
+    "chomage": 14.8
+  },
+  {
+    "code": 94021,
+    "chomage": 10.2
+  },
+  {
+    "code": 94022,
+    "chomage": 15.7
+  },
+  {
+    "code": 94028,
+    "chomage": 14.9
+  },
+  {
+    "code": 94033,
+    "chomage": 13.7
+  },
+  {
+    "code": 94034,
+    "chomage": 8.7
+  },
+  {
+    "code": 94037,
+    "chomage": 15.8
+  },
+  {
+    "code": 94038,
+    "chomage": 11.8
+  },
+  {
+    "code": 94041,
+    "chomage": 16.8
+  },
+  {
+    "code": 94042,
+    "chomage": 11.8
+  },
+  {
+    "code": 94043,
+    "chomage": 13.9
+  },
+  {
+    "code": 94044,
+    "chomage": 11.2
+  },
+  {
+    "code": 94046,
+    "chomage": 10.1
+  },
+  {
+    "code": 94047,
+    "chomage": 9.1
+  },
+  {
+    "code": 94048,
+    "chomage": 7.8
+  },
+  {
+    "code": 94052,
+    "chomage": 9.7
+  },
+  {
+    "code": 94053,
+    "chomage": 8.5
+  },
+  {
+    "code": 94054,
+    "chomage": 18
+  },
+  {
+    "code": 94055,
+    "chomage": 8.8
+  },
+  {
+    "code": 94056,
+    "chomage": 7.7
+  },
+  {
+    "code": 94058,
+    "chomage": 9.2
+  },
+  {
+    "code": 94059,
+    "chomage": 8.8
+  },
+  {
+    "code": 94060,
+    "chomage": 10.8
+  },
+  {
+    "code": 94065,
+    "chomage": 7.4
+  },
+  {
+    "code": 94067,
+    "chomage": 9.3
+  },
+  {
+    "code": 94068,
+    "chomage": 8.9
+  },
+  {
+    "code": 94069,
+    "chomage": 9
+  },
+  {
+    "code": 94070,
+    "chomage": 9.4
+  },
+  {
+    "code": 94071,
+    "chomage": 10.2
+  },
+  {
+    "code": 94073,
+    "chomage": 11.9
+  },
+  {
+    "code": 94074,
+    "chomage": 17.8
+  },
+  {
+    "code": 94075,
+    "chomage": 8
+  },
+  {
+    "code": 94076,
+    "chomage": 15.2
+  },
+  {
+    "code": 94077,
+    "chomage": 12.8
+  },
+  {
+    "code": 94078,
+    "chomage": 17.2
+  },
+  {
+    "code": 94079,
+    "chomage": 10.7
+  },
+  {
+    "code": 94080,
+    "chomage": 9.6
+  },
+  {
+    "code": 94081,
+    "chomage": 17.7
+  }
+]
