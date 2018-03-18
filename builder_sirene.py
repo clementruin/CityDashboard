@@ -21,7 +21,7 @@ for line in reader:
     company_type=line['CATEGORIE']
     
     if dept=='77' or dept=='78' or dept=='91' or dept=='92' or dept=='92' or dept=='75':
-        economy.append({"SIREN":siren, "CODPOS": postal_code, "DEPET": dept, "LIBAPET":business_area, "CATEGORIE":company_type})
+        economy.append({"Siren":siren, "Postal_code": postal_code, "Dept": dept, "Business_area":business_area, "Company_type":company_type})
 
 
 with open('static_dic/sirene_01_01_18.json', 'w') as file:
