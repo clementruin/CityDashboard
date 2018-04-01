@@ -12,7 +12,7 @@ for line in reader:
     rate = line['unemployment rate']
     # to convert decimal mark :
     rate = float(str(rate).replace(',', '.'))
-    unemployment.append({"code":code, "chomage":rate})
+    unemployment.append({"code":str(code), "chomage":rate})
 
 
 with open('static_dic/chomage.json', 'w') as file:

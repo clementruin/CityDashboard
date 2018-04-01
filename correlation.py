@@ -26,3 +26,4 @@ df = df[['portion_hlm_tenant','housing','partis.2014']]
 # correlation
 print(df['portion_hlm_tenant'].corr(df['housing']))
 print(df1.corr())
+print(df)
