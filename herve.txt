@@ -1,1 +1,19 @@
-coucou RV
+git add . (" . " = all, sinon mettre herve.txt)
+
+git commit -m "herve"
+
+git push origin master
+
+-----------
+
+git pull origin master
+
+-----------
+
+pwd : où on est
+
+cd : naviguer
+
+status : local en avance sur le repo ?
+
+/!\ pas push le mauvais doss'
