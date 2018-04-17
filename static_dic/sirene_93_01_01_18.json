@@ -18,7 +18,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93001
+		"Insee": "93001"
 	}, {
 		"Firms_Nb": 9508,
 		"Employee_0_rate": 5904,
@@ -39,7 +39,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93005
+		"Insee": "93005"
 	}, {
 		"Firms_Nb": 7055,
 		"Employee_0_rate": 4494,
@@ -60,7 +60,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93006
+		"Insee": "93006"
 	}, {
 		"Firms_Nb": 5554,
 		"Employee_0_rate": 3511,
@@ -81,7 +81,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93007
+		"Insee": "93007"
 	}, {
 		"Firms_Nb": 7493,
 		"Employee_0_rate": 4352,
@@ -102,7 +102,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93008
+		"Insee": "93008"
 	}, {
 		"Firms_Nb": 5125,
 		"Employee_0_rate": 3250,
@@ -123,7 +123,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93010
+		"Insee": "93010"
 	}, {
 		"Firms_Nb": 2189,
 		"Employee_0_rate": 1244,
@@ -144,7 +144,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93013
+		"Insee": "93013"
 	}, {
 		"Firms_Nb": 2918,
 		"Employee_0_rate": 1762,
@@ -165,7 +165,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93014
+		"Insee": "93014"
 	}, {
 		"Firms_Nb": 548,
 		"Employee_0_rate": 382,
@@ -186,7 +186,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93015
+		"Insee": "93015"
 	}, {
 		"Firms_Nb": 5275,
 		"Employee_0_rate": 3004,
@@ -207,7 +207,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93027
+		"Insee": "93027"
 	}, {
 		"Firms_Nb": 8214,
 		"Employee_0_rate": 4979,
@@ -228,7 +228,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93029
+		"Insee": "93029"
 	}, {
 		"Firms_Nb": 692,
 		"Employee_0_rate": 462,
@@ -249,7 +249,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93030
+		"Insee": "93030"
 	}, {
 		"Firms_Nb": 5852,
 		"Employee_0_rate": 3857,
@@ -270,7 +270,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93031
+		"Insee": "93031"
 	}, {
 		"Firms_Nb": 3988,
 		"Employee_0_rate": 2686,
@@ -291,7 +291,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93032
+		"Insee": "93032"
 	}, {
 		"Firms_Nb": 960,
 		"Employee_0_rate": 696,
@@ -312,7 +312,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93033
+		"Insee": "93033"
 	}, {
 		"Firms_Nb": 960,
 		"Employee_0_rate": 651,
@@ -333,7 +333,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93039
+		"Insee": "93039"
 	}, {
 		"Firms_Nb": 3840,
 		"Employee_0_rate": 2801,
@@ -354,7 +354,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93045
+		"Insee": "93045"
 	}, {
 		"Firms_Nb": 5106,
 		"Employee_0_rate": 3268,
@@ -375,7 +375,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93046
+		"Insee": "93046"
 	}, {
 		"Firms_Nb": 3616,
 		"Employee_0_rate": 2190,
@@ -396,7 +396,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93047
+		"Insee": "93047"
 	}, {
 		"Firms_Nb": 22327,
 		"Employee_0_rate": 14997,
@@ -417,7 +417,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93048
+		"Insee": "93048"
 	}, {
 		"Firms_Nb": 2823,
 		"Employee_0_rate": 1945,
@@ -438,7 +438,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93049
+		"Insee": "93049"
 	}, {
 		"Firms_Nb": 3418,
 		"Employee_0_rate": 2255,
@@ -459,7 +459,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93050
+		"Insee": "93050"
 	}, {
 		"Firms_Nb": 7963,
 		"Employee_0_rate": 5370,
@@ -480,7 +480,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93051
+		"Insee": "93051"
 	}, {
 		"Firms_Nb": 4952,
 		"Employee_0_rate": 3242,
@@ -501,7 +501,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93053
+		"Insee": "93053"
 	}, {
 		"Firms_Nb": 11778,
 		"Employee_0_rate": 7025,
@@ -522,7 +522,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93055
+		"Insee": "93055"
 	}, {
 		"Firms_Nb": 3541,
 		"Employee_0_rate": 2220,
@@ -543,7 +543,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93057
+		"Insee": "93057"
 	}, {
 		"Firms_Nb": 3294,
 		"Employee_0_rate": 2057,
@@ -564,7 +564,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93059
+		"Insee": "93059"
 	}, {
 		"Firms_Nb": 2930,
 		"Employee_0_rate": 2123,
@@ -585,7 +585,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93061
+		"Insee": "93061"
 	}, {
 		"Firms_Nb": 3213,
 		"Employee_0_rate": 2159,
@@ -606,7 +606,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93062
+		"Insee": "93062"
 	}, {
 		"Firms_Nb": 3549,
 		"Employee_0_rate": 2444,
@@ -627,7 +627,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93063
+		"Insee": "93063"
 	}, {
 		"Firms_Nb": 5520,
 		"Employee_0_rate": 3576,
@@ -648,7 +648,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93064
+		"Insee": "93064"
 	}, {
 		"Firms_Nb": 16727,
 		"Employee_0_rate": 10081,
@@ -669,7 +669,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93066
+		"Insee": "93066"
 	}, {
 		"Firms_Nb": 10749,
 		"Employee_0_rate": 7255,
@@ -690,7 +690,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93070
+		"Insee": "93070"
 	}, {
 		"Firms_Nb": 4054,
 		"Employee_0_rate": 2725,
@@ -711,7 +711,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93071
+		"Insee": "93071"
 	}, {
 		"Firms_Nb": 3716,
 		"Employee_0_rate": 2290,
@@ -732,7 +732,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93072
+		"Insee": "93072"
 	}, {
 		"Firms_Nb": 4531,
 		"Employee_0_rate": 2427,
@@ -753,7 +753,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93073
+		"Insee": "93073"
 	}, {
 		"Firms_Nb": 796,
 		"Employee_0_rate": 485,
@@ -774,7 +774,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93074
+		"Insee": "93074"
 	}, {
 		"Firms_Nb": 3754,
 		"Employee_0_rate": 2607,
@@ -795,7 +795,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93077
+		"Insee": "93077"
 	}, {
 		"Firms_Nb": 3976,
 		"Employee_0_rate": 2425,
@@ -816,7 +816,7 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93078
+		"Insee": "93078"
 	}, {
 		"Firms_Nb": 1214,
 		"Employee_0_rate": 741,
@@ -837,6 +837,6 @@
 		"Employee_2000_4999_rate": 0,
 		"Employee_5000_9999_rate": 0,
 		"Employee_over_10000_rate": 0,
-		"Insee": 93079
+		"Insee": "93079"
 	}
 ]
