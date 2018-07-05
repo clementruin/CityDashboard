@@ -1,18 +1,3 @@
-"""
-import csv
-
-readfile = open('database.csv', 'r')
-writefile = open('budgets.csv','w')
-outcsv = csv.writer(writefile)
-reader = csv.DictReader(readfile, delimiter=',')
-outcsv.writerow(['budget','population'])
-for line in reader:
-	a = float(line['total des produits de fonctionnement'])+float(line['total des charges de fonctionnement'])
-	b = float(line['population'])
-	outcsv.writerow([a,b])
-readfile.close()
-writefile.close()
-"""
 import json
 import csv
 

@@ -84,6 +84,3 @@ def main(code):
 		inp = input("which benchmark basis (pop/budget/location) ? ")
 		answer_is = valid_answer(inp)
 	return benchmark(code, inp)
-
-
-

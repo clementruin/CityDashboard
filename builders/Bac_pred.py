@@ -15,9 +15,6 @@ bac_dico = {}
 
 idf = ['75', '77', '78', '91', '92', '93', '94', '95']
 
-
-# comment organiser la base !? 
-
 features = [{
         "NbLycees_%d" % annee: 0,
         "Resultat_%d_(90)" % annee : 0,

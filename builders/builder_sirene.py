@@ -1,5 +1,4 @@
 import csv
-#import re
 import json
 import csv
 
@@ -75,4 +74,4 @@ for line in reader:
 with open('static_dic/sirene93f_01_01_18.json', 'w') as file:
     json.dump(economy, file)
     
-# rajout encoding='utf8' ?
+# encoding='utf8' ?

@@ -23,7 +23,7 @@ for line in reader:
 		"LogVac06" : float(line["lv2006"]),
 		"LogVac07" : float(line["lv2007"]),
 		"LogVac08" : float(line["lv2008"]),
-      "LogVac09" : float(line["lv2009"])
+      	"LogVac09" : float(line["lv2009"])
 	}
 	city_dico[code] = dico
 

@@ -23,9 +23,9 @@ for line in reader:
 		"Pop99" : float(line["POPEXH1999"]),
 		"Pop06" : float(line["POPMUN2006"]),
 		"Pop07" : float(line["POPMUN2007"]),
-      "Pop09" : float(line["POPMUN2009"]),
+      	"Pop09" : float(line["POPMUN2009"]),
 		"Pop10" : float(line["POPMUN2010"]),
-      "Pop11" : float(line["POPMUN2011"]),
+     	"Pop11" : float(line["POPMUN2011"]),
 	}
 	city_dico[code] = dico
 
