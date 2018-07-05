@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>D3 Demo</title>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+
+	<h1>Map interactive</h1>
+
+	<p>
+  		<label for="data_select" style="display: inline-block; width: 140px; text-align: right">
+    	Donnée =
+  		</label>
+  		<select id="data_select">
+    		<option value="2001">Partis politiques 2001</option>
+    		<option value="2008">Partis politiques 2008</option>
+    		<option value="2014">Partis politiques 2014</option>
+  		</select>
+	</p>
+	
+	<script>
+		/// AFFICHAGE MAP PARTIS ///
+
+		d3.select("body").append("div")
+		var canvas = d3.select("div").append("svg")
+						.attr("height", 750)
+						.attr("width", 1000) 
+		var canvas1 = d3.select("div").append("svg")
+						.attr("height", 1)
+						.attr("width", 1) 
+		var group;
+		var areas;
+		var data1;
+		var partisMapper = {"FN" : 3,
+                            "UMP-LR" : 3,
+                            "DVD" : 3,
+                            "UDI" : 3,
+                            "SE" : 2,
+                            "MoDem" : 2,
+                            "PRG" : 2,
+                            "EELV" : 4,
+                            "DVG" : 4,
+                            "PS" : 4,
+                            "FG" : 4,
+                            "PCF" : 4,
+                            "NA" : 1};
+        generate_map()
+		d3.select("#data_select").on("change", generate_map);
+
+		function generate_map() {
+			var year = document.getElementById("data_select").value;
+
+			canvas.selectAll("g").remove()
+			canvas1.selectAll("g").remove()
+
+			// données à afficher
+			d3.json("static/partisidfD3.json", function (data) {
+				 data1 = canvas1.selectAll("g")
+						.data(data)
+						.enter()
+							.append("g")
+							.attr('id', function (d) {
+								return parseInt(d.code);
+								})
+							.attr("intensity", function (d) {
+								return partisMapper[d["partis"][year]]; 
+								})
+							._groups[0]
+
+			})
+
+			// chargement de la map
+			d3.json("static/idf.geojson", function (data) {
+
+				// boite pour afficher les tags sur la map
+				var mouse_div = d3.select("div").append("div")	
+	    				.attr("class", "tooltip")				
+	    				.style("opacity", 0);
+
+	    		// échelle de couleur 
+				var color2 = ["#922B21", "#c8c8c8", "#ecc77e", "#323299", "#cc0000"]
+
+				// groupe de toutes les communes
+				group = canvas.selectAll("g")
+							.data(data.features)
+							.enter()
+								.append("g")
+
+				// projection et path de projection 
+				var projection = d3.geoMercator()
+									.center([0,0])
+									.scale(20000)
+									.translate([-350,19850])
+
+				var path = d3.geoPath().projection(projection);
+
+				// représentation de chaque communes : couleur et mouse tag
+				areas = group.append("path")
+							.attr("d", path)
+							.attr("class", "area")
+							.attr("fill", function (d) {
+								for (i=0; i<data1.length; i++) {
+									if (data1[i].id==d.properties.code) {
+									return color2[data1[i].getAttribute("intensity")]
+										}
+									}
+								})
+							.attr("border-color", "black")
+							.on("mouseover", function (d) {
+	                			mouse_div.text(d.properties.nom)
+	                				.style("opacity", 1)
+	                				.style("background-color", "lightsteelblue")
+	                				.style("left", (d3.event.pageX) + "px")     
+	           						.style("top", (d3.event.pageY - 30) + "px");	
+							})
+							.on("mouseout", function (d) {
+								mouse_div.style("opacity", 0);
+							})
+
+			})
+		}
+	</script>
+
+	<h1>Bar graph interactif</h1>
+
+	<p>
+		<form>
+			<input type="text" id="mySearch" placeholder="Entrez un code INSEE...">
+		</form>
+		<button class="newcity" onclick="newCode()">C'est parti</button>
+	</p>
+
+	<script type="text/javascript">
+	    /// AFICHAGE BAR GRPAH ///
+	    var city_code = {{ city_code }};
+
+	    var canvas3 = d3.select("body").append("div")
+
+	    // graph
+		var svg = canvas3.append("svg")
+					.attr("width", 1000)
+	    			.attr("height", 700)
+	    			.attr("top", 200)
+
+	    // graph title
+	    canvas3.append("h3")
+	    	.text("code insee : "+ city_code)
+	    	.attr("id", "display-city-code")
+
+
+	    // legend
+	    var svg2 = canvas3.append("svg")
+						.attr("width", 1500)
+	    				.attr("height", 60)
+	    				.attr("class", "legend")
+
+	    var mouse = d3.select("body").append("div")	
+    				.attr("class", "tooltip")				
+    				.style("opacity", 0);
+		    
+		var margin = {top: 100, right: 20, bottom: 30, left: 40},
+		    width = +svg.attr("width") - margin.left - margin.right,
+		    height = +svg.attr("height") - margin.top - margin.bottom,
+		    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		var x0 = d3.scaleBand()
+		    .rangeRound([0, width])
+		    .paddingInner(0.1);
+
+		var x1 = d3.scaleBand()
+		    .padding(0.05);
+
+		var y = d3.scaleLinear()
+		    .rangeRound([height, 0]);
+
+		var z = d3.scaleOrdinal()
+		    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+		var keys_user;
+
+		var keys_all;
+
+		function remove(arr, what) {
+    		var found = arr.indexOf(what);
+
+    		while (found !== -1) {
+        		arr.splice(found, 1);
+        		found = arr.indexOf(what);
+			    }
+			}
+
+		function getindex(index_list, city_code) {
+			for (i=0; i<index_list.length; i++) {
+				if (index_list[i]["code"]==city_code) {
+					return index_list[i]["index"]
+				}
+			}
+		}
+
+		function newCode() {
+    		city_code = document.getElementById("mySearch").value;
+		}
+			
+		// création des boutons
+		function build_legend(keys_user) {
+
+			d3.json("static/budgetsD3.json", function(data) {
+				keys_all = Object.keys(data[0]["years"][0]["values"]);
+
+				var legend = svg2.selectAll("g")
+								.data(keys_all)
+								.enter()
+									.append("g")
+									.attr("width", 60)
+									.attr("heigth", 35)
+									.attr("font-family", "sans-serif")
+								    .attr("font-size", 12)
+								    .attr("text-anchor", "middle")
+								    .attr("transform", function(d, i) { return "translate(" + i * 56 + ", 0)"; })
+
+				legend.append("rect")
+					.attr("fill", function(d) { return z(d); })
+					.attr("class","lrect")
+
+				legend.append("text")
+					.attr("x", function(k,i) {return 28;})
+					.attr("y", 20)
+					.text(function(k) {return k;})
+
+				legend.append("rect")
+					.attr("class","lbutton")
+					.attr("opacity", function(d) {
+						if (keys_user.indexOf(d)>=0) {return 0;} 
+						else {return 0.5;}
+						})
+
+				});
+
+		}
+
+		// affichage des donées + interaction
+		d3.json("static/budgetsD3.json", function(data) {
+
+		  var index_list = data.map(function(d, i) {return {index: i, code : d["code"] }})
+		  var j = getindex(index_list, city_code)
+		  keys_all = Object.keys(data[0]["years"][0]["values"]);
+		  keys_user = [keys_all[0]];
+		  change(data, j, keys_user);
+		  build_legend(keys_user);
+
+		  d3.selectAll(".newcity")
+		  	.on("click", function() {
+		  		j = getindex(index_list, city_code);
+		  		if (typeof j !== 'undefined') {
+		  			change(data, j, keys_user);
+		  		} 
+		  		else {
+		  			document.getElementById("mySearch").placeholder = "Entrez un code valide !"
+		  			document.getElementById("mySearch").value = ""
+		  			city_code = 92002
+		  		}
+		  	})
+
+		  svg2.selectAll(".lbutton")
+		  	.on("click", function(i) {
+		  		if (keys_user.indexOf(i)>=0) {
+		  			remove(keys_user, i);
+		  			this.attributes.opacity.value=0.5;
+		  		} else {
+		  			keys_user.push(i)
+		  			this.attributes.opacity.value=0;
+		  		}
+		  		change(data, j, keys_user);
+		  	})
+
+		  	svg2.selectAll(".lbutton")
+		  		.on("mouseover", function() {
+		  			if (this.attributes.opacity.value!=0) {
+		  			this.attributes.opacity.value=0.1;
+		  				}
+		  			})
+		  		.on("mouseout", function() {
+		  			if (this.attributes.opacity.value!=0) {
+		  			this.attributes.opacity.value=0.5;
+		  				}
+		  			})
+
+		  function change(data, j, keys_user) {
+
+		  	  svg.selectAll(".trans").remove()
+		  	  svg.selectAll(".axis").remove()
+
+			  data = data[j]["years"]
+
+			  var year_keys = data.map(function(d) {return d["year"];})
+
+			  x0.domain(year_keys);
+			  x1.domain(keys_user).rangeRound([0, x0.bandwidth()]);
+
+			  y.domain([0, d3.max(data, function(d) { return d3.max(keys_user, function(key) { return d["values"][key]; }); })]).nice();
+
+			  g.append("g")
+			    .selectAll("g")
+			    .data(data)
+			    .enter()
+			    	.append("g")
+			    	.attr("class", "trans")
+			      	.attr("transform", function(d) { return "translate(" + x0(d["year"]) + ",0)"; })
+			    .selectAll("rect")
+			    .data(function(d) { return keys_user.map(function(key) { return {key: key, value: d["values"][key]}; }); })
+			    .enter().append("rect")
+			      .attr("x", function(d) { return x1(d.key); })
+			      .attr("width", x1.bandwidth())
+			      .attr("y", height)
+			      .attr("height", 0)
+			      .on("mouseover", function (d) {
+                		mouse.text(d.key + " : "+ d.value)
+                			.style("opacity", 0.85)
+                			.style("left", (d3.event.pageX) + "px")     
+           					.style("top", (d3.event.pageY - 30) + "px")
+           					.style("background-color", z(d.key))
+           					.style("border-color", "rgb(14,14,14)");
+						})
+				  .on("mouseout", function (d) {
+						mouse.style("opacity", 0);
+					})
+			      .transition().duration(1000)
+			      	.attr("height", function(d) { return height-y(d.value); })
+			      	.attr("y", function(d) { return y(d.value);})
+			      	.attr("fill", function(d) { return z(d.key); });
+
+			  g.append("g")
+			      .attr("class", "axis")
+			      .attr("transform", "translate(0," + height + ")")
+			      .call(d3.axisBottom(x0));
+
+			  g.append("g")
+			      .attr("class", "axis")
+			      .call(d3.axisLeft(y).ticks(null, "s"))
+			    .append("text")
+			      .attr("x", 10)
+			      .attr("y", y(y.ticks().pop()) + 0.5)
+			      .attr("dy", "0.32em")
+			      .attr("fill", "#000")
+			      .attr("font-weight", "bold")
+			      .attr("text-anchor", "start")
+			      .text("Euros");
+
+			  var legend = svg.append("g")
+			      .attr("font-family", "sans-serif")
+			      .attr("font-size", 10)
+			      .attr("text-anchor", "end")
+			    .selectAll("g")
+			    .data(keys_all.slice().reverse())
+			    .enter().append("g")
+			      .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+			  d3.select("h3").text("Insee Code : " + city_code)
+			}
+		});
+
+	</script>
+</body>
+</body>
+
+</html>

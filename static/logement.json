@@ -1,9 +1,123 @@
 [
   {
-    "inseecode": "75056",
+    "inseecode": "75101",
     "housing": 1362182,
     "main_res": 1147991,
-    "portion_hlm_tenant": 17.9
+    "portion_hlm_tenant": 11
+  },
+  {
+    "inseecode": "75102",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 5.6
+  },
+  {
+    "inseecode": "75103",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 8.2
+  },
+  {
+    "inseecode": "75104",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 14.1
+  },
+  {
+    "inseecode": "75105",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 9.2
+  },
+  {
+    "inseecode": "75106",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 3.6
+  },
+  {
+    "inseecode": "75107",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 2.1
+  },
+  {
+    "inseecode": "75108",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 3.2
+  },
+  {
+    "inseecode": "75109",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 6.6
+  },
+  {
+    "inseecode": "75110",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 14.2
+  },
+  {
+    "inseecode": "75111",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 13.4
+  },
+  {
+    "inseecode": "75112",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 22.2
+  },
+  {
+    "inseecode": "75113",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 37.4
+  },
+  {
+    "inseecode": "75114",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 26.1
+  },
+  {
+    "inseecode": "75115",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 17.3
+  },
+  {
+    "inseecode": "75116",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 6.1
+  },
+  {
+    "inseecode": "75117",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 13.8
+  },
+  {
+    "inseecode": "75118",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 21.8
+  },
+  {
+    "inseecode": "75119",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 39.9
+  },
+  {
+    "inseecode": "75120",
+    "housing": 1362182,
+    "main_res": 1147991,
+    "portion_hlm_tenant": 24.0
   },
   {
     "inseecode": "77001",

@@ -5,7 +5,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 1
 
 @app.route('/')
 def home():
-    return render_template("index.html", city_code=92002)
+    return render_template("index2.html", city_code=92002)
 
 if __name__ == '__main__':
 	app.run(debug=True)

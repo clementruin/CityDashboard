@@ -16,8 +16,8 @@
 		d3.select("body").append("div")
 
 		var canvas = d3.select("div").append("svg")
-						.attr("height", 700)
-						.attr("width", 700) 
+						.attr("height", 750)
+						.attr("width", 1000) 
 
 		var canvas1 = d3.select("div").append("svg")
 						.attr("height", 1)
@@ -43,16 +43,16 @@
 
 		})
 		*/
-		d3.json("static/logement.json", function (data) {
+		d3.json("static/partis_json.json", function (data) {
 			 data1 = canvas1.selectAll("g")
 					.data(data)
 					.enter()
 						.append("g")
 						.attr('id', function (d) {
-							return d.inseecode;
+							return d.X;
 						})
 						.attr("intensity", function (d) {
-							return d.portion_hlm_tenant;
+							return d['partis.2014'];
 						})._groups[0]
 
 		})
@@ -67,8 +67,13 @@
 
     		// échelle de couleur 
 			var color = d3.scaleLinear()
-						.domain([0, 60])
-						.range(["white", "steelblue"]);
+						.domain([0, 4])
+						.range(["purple", "pink"]);
+						//.range(["white", "steelblue"]);
+
+			var color1 = ["#922B21", "#E6B0AA", "#76D7C4", "#922B21"]
+			//["#922B21", "#E6B0AA", "#76D7C4", "#922B21"]
+			var color2 = ["#922B21", "#c8c8c8", "#ecc77e", "#323299", "#cc0000"]
 
 			// groupe de toutes les communes
 			group = canvas.selectAll("g")
@@ -77,7 +82,10 @@
 							.append("g")
 
 			// projection et path de projection 
-			var projection = d3.geoMercator().scale(12000).translate([-200,12000]);
+			var projection = d3.geoMercator()
+								.center([0,0])
+								.scale(20000)
+								.translate([-350,19850])
 
 			var path = d3.geoPath().projection(projection);
 
@@ -89,10 +97,14 @@
 						.attr("fill", function (d) {
 							for (i=0; i<data1.length; i++) {
 								if (data1[i].id==d.properties.code) {
-									return color(data1[i].getAttribute("intensity"));
+								//	return color(data1[i].getAttribute("intensity"));
+									
+								console.log(data1[i])
+								return color2[data1[i].getAttribute("intensity")]
 									}
 								}
 							})
+						.attr("border-color", "black")
 						.on("mouseover", function (d) {
                 			mouse_div.text(d.properties.nom)
                 				.style("opacity", 1)
@@ -503,6 +515,90 @@
 		    	return d.value;
 		    });
 	  });
+	</script>
+
+	<h1>Cartographie des logements HLM</h1>
+
+	<script>
+		/// AFFICHAGE MAP LOGEMENTS HLM ///
+			d3.select("body").append("div")
+			var canvas = d3.select("div").append("svg")
+							.attr("height", 750)
+							.attr("width", 1000) 
+			var canvas1 = d3.select("div").append("svg")
+							.attr("height", 1)
+							.attr("width", 1) 
+			var group;
+			var areas;
+			var data1;
+			// données à afficher
+			
+			d3.json("static/logement.json", function (data) {
+				 data1 = canvas1.selectAll("g")
+						.data(data)
+						.enter()
+							.append("g")
+							.attr('id', function (d) {
+								return d.inseecode;
+							})
+							.attr("intensity", function (d) {
+								return d.portion_hlm_tenant;
+							})._groups[0]
+
+			})
+
+			// chargement de la map
+			d3.json("static/idf.geojson", function (data) {
+
+				// boite pour afficher les tags sur la map
+				var mouse_div = d3.select("div").append("div")	
+	    				.attr("class", "tooltip")				
+	    				.style("opacity", 0);
+
+	    		// échelle de couleur 
+				var color = d3.scaleLinear()
+							.domain([0, 100])
+							.range(["white", "steelblue"]);
+
+				// groupe de toutes les communes
+				group = canvas.selectAll("g")
+							.data(data.features)
+							.enter()
+								.append("g")
+
+				// projection et path de projection 
+				var projection = d3.geoMercator()
+									.center([0,0])
+									.scale(20000)
+									.translate([-350,19850])
+
+				var path = d3.geoPath().projection(projection);
+
+
+				// représentation de chaque communes : couleur et mouse tag
+				areas = group.append("path")
+							.attr("d", path)
+							.attr("class", "area")
+							.attr("fill", function (d) {
+								for (i=0; i<data1.length; i++) {
+									if (data1[i].id==d.properties.code) {
+										return color(data1[i].getAttribute("intensity"));
+										}
+									}
+								})
+							.attr("border-color", "black")
+							.on("mouseover", function (d) {
+	                			mouse_div.text(d.properties.nom)
+	                				.style("opacity", 1)
+	                				.style("background-color", "lightsteelblue")
+	                				.style("left", (d3.event.pageX) + "px")     
+	           						.style("top", (d3.event.pageY - 30) + "px");	
+							})
+							.on("mouseout", function (d) {
+								mouse_div.style("opacity", 0);
+							})
+
+			})
 	</script>
 </body>
 </body>
