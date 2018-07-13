@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Budget des Mairies en France</title>
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<script src="http://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+
+	<h2>Cherchez votre ville</h2>
+	<input type="text" id="myInput" onkeyup="updateSearchList(10)" placeholder="Chercher une ville.." title="Type in a name">
+	<ul id="myUL">
+	</ul>
+
+	<h1 id="display-city-code"></h1>	
+	<script type="text/javascript">
+
+	//---- VARIABLES ----//
+
+	   	var legend_names = [
+	   			   "Budget",
+			       "	Depenses",
+			       "		Dépenses de fonctionnement",
+			       "			achats et autres charges externes",
+			       "			charges de personnel",
+			       "			charges financières",
+			       "			contingents",
+			       "			subventions versées",
+			       "		Emplois d investissements",
+			       "			charges a répartir",
+			       "			depenses d’equipement",
+			       "			remboursement d emprunts et dettes assimilées",
+			       "	Recettes",
+			       "		Total des produits de fonctionnement",
+			       "			autres impôts et taxes",
+			       "			dotation globale de fonctionnement",
+			       "			impots locaux",
+			       "		Total des ressources d investissement",
+			       "			emprunts bancaires et dettes assimilées",
+			       "			subventions reçues"
+	   	]
+
+	   	var legend_names_offset = [0, 1, 2, 3, 3, 3, 3, 3, 2, 3, 3, 3, 1, 2, 3, 3, 3 ,2, 3, 3]
+
+	    var canvas = d3.select("body")
+	    			.append("div")
+
+	    // bar chart 
+		var svg = canvas.append("svg")
+					.attr("width", 1000)
+	    			.attr("height", 650)
+	    			.attr("top", 50)
+	    			.attr("class", "graph")
+
+	    // Header for features to display 
+	    canvas.append("h3").text("Selectionnez les données à afficher :")
+
+	    // legend
+	    var svg2 = canvas.append("svg")
+					.attr("width", 1000)
+	    			.attr("height", 700)
+	    			.attr("class", "legend")
+	    			.attr("top", 50)
+
+	    var mouse = d3.select("body")
+	    			.append("div")	
+    				.attr("class", "tooltip")				
+    				.style("opacity", 0);
+		    
+		var margin = {top: 100, right: 20, bottom: 30, left: 40};
+		var width = svg.attr("width") - margin.left - margin.right;
+		var height = svg.attr("height") - margin.top - margin.bottom;
+		var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+		var x0 = d3.scaleBand().rangeRound([0, width]).paddingInner(0.1);
+		var x1 = d3.scaleBand().padding(0.05);
+		var y = d3.scaleLinear().rangeRound([height, 0]);
+		var z = d3.scaleOrdinal().range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+		// all possible feaures to be displayed on the graph
+		var keys_all;
+		// features the user wants to display on the graph 
+		var keys_user;
+		var index_list;
+		var j;
+		var all_data;
+		var city_code, city_name;
+
+	//---- COMMANDS ----//
+
+	  	// initialize search bar 
+		initSearchList();
+
+		// initial grpah and legend for a given city 
+		initGraphAndLegend();
+
+	//---- FUNCTIONS ----//
+
+		function initSearchList() {
+			d3.json("static/budgetsD3.json", function(data) {
+				filter_list = d3.select("body")
+								.select("ul")
+								.selectAll("li")
+								.data(data)
+								.enter()
+									.append("li")
+									.attr("class", "newcity")
+									.attr("code", function(d) {return d.code;})
+									.attr("onclick", "newCode(this); return false;")
+									.attr("style", "display: none")
+									.append("a")
+									.attr("href", "#")
+								    .text(function(d) {return  d.name+ ", " +d.code.substring(0, 2);;})
+			});
+		}
+
+		function updateSearchList(entries_num) {
+		    var input, filter, ul, li, a, i, counter;
+		    input = document.getElementById("myInput");
+		    filter = input.value.toUpperCase();
+		    ul = document.getElementById("myUL");
+		    li = ul.getElementsByTagName("li");
+		    counter = 0;
+		    for (i = 0; i < li.length; i++) {
+		        a = li[i].getElementsByTagName("a")[0];
+		        if (a.innerHTML.toUpperCase().indexOf(filter) == 0 & counter < entries_num) {
+		            li[i].style.display = "";
+		            counter = counter + 1 
+		        } else {
+		            li[i].style.display = "none";
+		        }
+		    }
+		}
+
+		function initGraphAndLegend() {
+			d3.json("static/budgetsD3.json", function(data) {
+				keys_all = Object.keys(data[0]["years"][0]["values"]);
+		  		keys_user = [keys_all[0]];
+		  		index_list = data.map(function(d, i) {return {index: i, code : d["code"] }})
+		  		city_code = 78160;
+		  		city_name = "CHEVREUSE";
+		 		j = getindex(index_list, city_code)
+		  		all_data = data;
+		  		change(all_data, j, keys_user);
+		  		build_legend(keys_user);
+		  });
+		}
+
+		function remove(arr, what) {
+    		var found = arr.indexOf(what);
+    		while (found !== -1) {
+        		arr.splice(found, 1);
+        		found = arr.indexOf(what);
+			}
+		}
+
+		function getindex(index_list, city_code) {
+			for (i=0; i<index_list.length; i++) {
+				if (index_list[i]["code"]==city_code) {
+					return index_list[i]["index"]
+				}
+			}
+		}
+
+		// redefine the new city code after a change
+		function newCode(e) {
+    		city_code = parseInt(e.getAttribute("code"));
+		  	j = getindex(index_list, city_code);
+		  	change(all_data, j, keys_user);
+		  	document.getElementById("myInput").value = "";
+		  	updateSearchList(0);
+		}
+			
+		// legend buttons creation
+		function build_legend(keys_user) {
+			d3.json("static/budgetsD3.json", function(data) {
+				var legend = svg2.selectAll("g")
+								.data(keys_all)
+								.enter()
+									.append("g")
+									.attr("width", 800)
+									.attr("heigth", 30)
+									.attr("font-family", "sans-serif")
+								    .attr("font-size", 12)
+								    .attr("transform", function(d, i) { return "translate(50, " + (i * 34 + 3) + ")"; })
+				legend.append("rect")
+					.attr("fill", function(d) { return z(d); })
+					.attr("class","lrect")
+				legend.append("rect")
+					.attr("class","lbutton")
+					.style("fill", "#ffffff")
+					.attr("opacity", function(d) {
+						if (keys_user.indexOf(d)>=0) {return 0;} 
+						else {return 1;}
+						})
+					.on("click", function(i) {
+		  				if (keys_user.indexOf(i)>=0) {
+		  					remove(keys_user, i);
+		  					this.attributes.opacity.value=1;
+		  				} else {
+		  					keys_user.push(i)
+		  					this.attributes.opacity.value=0;
+		  				}
+		  				change(all_data, j, keys_user);
+		  				}
+		  			)
+		  			.on("mouseover", function() {
+		  				if (this.attributes.opacity.value!=0) {
+		  					this.attributes.opacity.value=0.5;
+		  					}
+		  				}
+		  			)
+		  			.on("mouseout", function() {
+		  				if (this.attributes.opacity.value!=0) {
+		  					this.attributes.opacity.value=1;
+		  					}
+		  				}
+		  			)
+				legend.append("text")
+					.attr("x", function(k,i) {return 10 + 50*legend_names_offset[i];})
+					.attr("y", 20)
+					.text(function(k, i) {return legend_names[i];})
+				});
+		}
+
+		// update graph 
+		function change(data, j, keys_user) {
+		  		city_name = data[j]["name"]; //deplacer 
+		  	  	svg.selectAll(".trans").remove()
+		  	  	svg.selectAll(".axis").remove()
+			  	data = data[j]["years"];
+			  	var year_keys = data.map(function(d) {return d["year"];})
+			  	x0.domain(year_keys);
+			  	x1.domain(keys_user).rangeRound([0, x0.bandwidth()]);
+			  	y.domain([0, d3.max(data, function(d) { return d3.max(keys_user, function(key) { return d["values"][key]; }); })]).nice();
+			  	g.append("g")
+			    	.selectAll("g")
+			    	.data(data)
+			    	.enter()
+			    		.append("g")
+			    		.attr("class", "trans")
+			      		.attr("transform", function(d) { return "translate(" + x0(d["year"]) + ",0)"; })
+			    		.selectAll("rect")
+			    		.data(function(d) { return keys_user.map(function(key) { return {key: key, value: d["values"][key]}; }); })
+			    		.enter()
+			    			.append("rect")
+			      			.attr("x", function(d) { return x1(d.key); })
+			      			.attr("width", x1.bandwidth())
+			      			.attr("y", height)
+			      			.attr("height", 0)
+			      			.on("mouseover", function (d) {
+                				mouse.text(d.key + " : "+ d.value)
+                				.style("opacity", 0.85)
+                				.style("left", (d3.event.pageX) + "px")     
+           						.style("top", (d3.event.pageY - 30) + "px")
+           						.style("background-color", z(d.key))
+           						.style("border-color", "rgb(14,14,14)");
+								}
+							)
+				  			.on("mouseout", function (d) {
+								mouse.style("opacity", 0);
+								}
+							)
+						    .transition().duration(1000)
+						      	.attr("height", function(d) { return height-y(d.value); })
+						      	.attr("y", function(d) { return y(d.value);})
+						      	.attr("fill", function(d) { return z(d.key); });
+			  	g.append("g")
+			      	.attr("class", "axis")
+			      	.attr("transform", "translate(0," + height + ")")
+			      	.call(d3.axisBottom(x0));
+			  	g.append("g")
+			      	.attr("class", "axis")
+			      	.call(d3.axisLeft(y).ticks(null, "s"))
+			    	.append("text")
+			      	.attr("x", 10)
+			      	.attr("y", y(y.ticks().pop()) + 0.5)
+			      	.attr("dy", "0.32em")
+			      	.attr("fill", "#000")
+			      	.attr("font-weight", "bold")
+			      	.attr("text-anchor", "start")
+			      	.text("Euros");
+			  	var legend = svg.append("g") // to be deleted
+			      	.attr("font-family", "sans-serif")
+			      	.attr("font-size", 10)
+			      	.attr("text-anchor", "end")
+			    	.selectAll("g")
+			    	.data(keys_all.slice().reverse())
+			    	.enter()
+			    		.append("g")
+			      		.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+			  	d3.select("h1").text("Budget de la Mairie de " + city_name + " (code INSEE : " + city_code + ")")
+			};
+	</script>
+
+</body>
+
+</html>

@@ -13,16 +13,16 @@ path {
     shape-rendering: crispEdges;
 }
 
-div.tooltip {	
-    position: absolute;			
-    text-align: center;			
-    width: 90px;					
-    height: 28px;					
-    padding: 2px;				
-    font: 12px sans-serif;		
+div.tooltip {   
+    position: absolute;         
+    text-align: center;         
+    width: 90px;                    
+    height: 28px;                   
+    padding: 2px;               
+    font: 12px sans-serif;      
     border: 1px;
-    border-radius: 8px;			
-    pointer-events: none;			
+    border-radius: 8px;         
+    pointer-events: none;           
 }
 
 text.tag {
@@ -37,16 +37,15 @@ text.tag {
 }
 
 .lrect {
-    height:33px;
-    width: 52px;
-    text-anchor: middle;
+    height:30px;
+    width: 800px;
     stroke: black;
     stroke-width: 1px;
 }
 
 .lbutton {
-    height:33px;
-    width: 52px;
+    height:30px;
+    width: 800px;
 }
 
 table { 
@@ -71,5 +70,37 @@ td, th {
 
 tr:hover
 {
-    background-color: #FFFF6B;	
+    background-color: #FFFF6B;  
+}
+
+#myInput {
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 11px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
 }

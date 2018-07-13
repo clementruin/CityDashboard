@@ -64,7 +64,8 @@ for line in reader:
 					"r2.2": float(line["subventions recues"]) 
 						}
 					}
-			city_list.append({"code":code, "years":[current_year_dico]})
+			name = line["nom"]
+			city_list.append({"code":code, "name": name, "years":[current_year_dico]})
 
 readfile.close()
 
